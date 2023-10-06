@@ -2,7 +2,7 @@
   "name": "project-manager",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://project-manager-server-ashen.vercel.app",
+  "proxy": "https://pm-server-dangtrantien.vercel.app",
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
     "@ant-design/plots": "^1.2.5",

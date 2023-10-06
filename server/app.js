@@ -42,7 +42,7 @@ app.use(bodyParser.json());
 app.use(
   cors({
     origin: [
-      'https://project-manager-admin.vercel.app',
+      'https://project-manager-dangtrantien.vercel.app',
       'http://localhost:3000/',
     ],
     credentials: true,
