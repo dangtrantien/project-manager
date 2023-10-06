@@ -33,7 +33,6 @@ const NewProject = () => {
   const departmentList = useSelector((state) => state.department.data);
 
   const [openModal, setOpenModal] = useState(false);
-  const [selectedDepartment, setSelectedDepartment] = useState([]);
   const [selectedEmployee, setSelectedEmployee] = useState([]);
 
   const [form] = Form.useForm();
@@ -72,51 +71,46 @@ const NewProject = () => {
         message: 'Nhân viên không được để trống!',
       });
     }
-    console.log({
-      ...value,
-      departments: selectedDepartment,
-      employees: selectedEmployee,
-    });
-    // axios({
-    //   url: url,
-    //   method: method,
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   withCredentials: true,
-    //   data: JSON.stringify({
-    //     ...value,
-    //     departments: selectedDepartment,
-    //     employees: selectedEmployee,
-    //   }),
-    // })
-    //   .then((res) => {
-    //     messageApi.open({
-    //       key: 'updatable',
-    //       type: 'loading',
-    //       content: 'Loading...',
-    //     });
 
-    //     setTimeout(() => {
-    //       messageApi.open({
-    //         key: 'updatable',
-    //         type: 'success',
-    //         content: res.data.message,
-    //       });
-    //     }, 2000);
+    axios({
+      url: url,
+      method: method,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      withCredentials: true,
+      data: JSON.stringify({
+        ...value,
+        employees: selectedEmployee,
+      }),
+    })
+      .then((res) => {
+        messageApi.open({
+          key: 'updatable',
+          type: 'loading',
+          content: 'Loading...',
+        });
 
-    //     setTimeout(() => navigate('/project', { replace: true }), 3000);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
+        setTimeout(() => {
+          messageApi.open({
+            key: 'updatable',
+            type: 'success',
+            content: res.data.message,
+          });
+        }, 2000);
 
-    //     if (error.response.status === 422) {
-    //       notificationApi['error']({
-    //         message: error.response.data.message,
-    //         placement: 'top',
-    //       });
-    //     }
-    //   });
+        setTimeout(() => navigate('/project', { replace: true }), 3000);
+      })
+      .catch((error) => {
+        console.log(error);
+
+        if (error.response.status === 422) {
+          notificationApi['error']({
+            message: error.response.data.message,
+            placement: 'top',
+          });
+        }
+      });
   };
 
   useEffect(() => {
@@ -130,7 +124,6 @@ const NewProject = () => {
       const projectDepartmentList = state.departments.map((d) => d._id);
       const projectEmployeeList = state.employees.map((e) => e._id);
 
-      setSelectedDepartment(projectDepartmentList);
       setSelectedEmployee(projectEmployeeList);
 
       form.setFieldsValue({
