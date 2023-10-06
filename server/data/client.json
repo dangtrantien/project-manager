@@ -1,0 +1,74 @@
+[
+  {
+    "_id": {
+      "$oid": "650d3e660110b79f64598c3e"
+    },
+    "name": "FPT",
+    "short_desc": "Mô tả",
+    "long_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "priority": "2",
+    "state": "active",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:22:09.308Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:22:15.451Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d3e9f2ceca136d86b915e"
+    },
+    "name": "MindX",
+    "short_desc": "Mô tả",
+    "long_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "priority": "3",
+    "state": "inactive",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:21:57.387Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:21:57.387Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d3ea32ceca136d86b915f"
+    },
+    "name": "FuNiX",
+    "short_desc": "Mô tả",
+    "long_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "priority": "1",
+    "state": "active",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:21:33.544Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:21:33.544Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d3ea62ceca136d86b9160"
+    },
+    "name": "VMO",
+    "short_desc": "Công ty công nghệ thông tin",
+    "long_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "priority": "1",
+    "state": "active",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-13T02:27:17.343Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-13T02:27:17.343Z"
+    },
+    "__v": 0
+  }
+]

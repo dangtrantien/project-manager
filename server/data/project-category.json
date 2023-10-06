@@ -1,0 +1,218 @@
+[
+  {
+    "_id": {
+      "$oid": "650d2e98bcdf03e7a4026502"
+    },
+    "name": "E-Learning",
+    "short_desc": "Web học tập",
+    "long_desc": "Website tập hợp kiến thức liên quan đến môn học, thông tin về các quyển sách hữu ích, các video dạy học từ các giáo viên giỏi nhất giúp người dùng học tập hiệu quả.",
+    "priority": "1",
+    "state": "active",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2014-09-13T02:08:36.791Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-13T02:08:36.791Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d31203c116681ca97b6a0"
+    },
+    "name": "E-Commerce",
+    "short_desc": "Web bán hàng",
+    "long_desc": "Website cung cấp thông tin về các sản phẩm mới nhất của cửa hàng: giá cả, thông tin chi tiết, ảnh, đánh giá của khách hàng, ...",
+    "priority": "1",
+    "state": "active",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2019-09-13T02:09:12.469Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-13T02:09:12.469Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d31a62ceca136d86b914a"
+    },
+    "name": "AI",
+    "short_desc": "Mô tả",
+    "long_desc": "Mô tả rất rất rất rất rất là chi tiết",
+    "priority": "3",
+    "state": "inactive",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2020-09-13T02:10:00.575Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-13T02:10:00.575Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d31af2ceca136d86b914b"
+    },
+    "name": "E-Health",
+    "short_desc": "Web chăm sóc sức khỏe",
+    "long_desc": "Mô tả chi tiết",
+    "priority": "2",
+    "state": "active",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2021-09-13T02:10:33.309Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-13T02:10:33.309Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d31b22ceca136d86b914c"
+    },
+    "name": "Media & Entertainment",
+    "short_desc": "Web giải trí",
+    "long_desc": "Mô tả",
+    "priority": "3",
+    "state": "inactive",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2022-09-13T02:10:57.100Z"
+    },
+    "updatedAt": {
+      "$date": "2022-09-13T02:10:57.100Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d31b52ceca136d86b914d"
+    },
+    "name": "Financial Technology",
+    "short_desc": "Web thanh toán",
+    "long_desc": "Mô tả rất rất rất rất rất là chi tiết",
+    "priority": "4",
+    "state": "inactive",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2019-09-13T02:11:31.838Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-13T02:11:31.838Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d31b82ceca136d86b914e"
+    },
+    "name": "AI",
+    "short_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "long_desc": "Mô tả rất rất rất rất rất là chi tiết",
+    "priority": "1",
+    "state": "active",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2017-09-13T02:11:52.719Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-13T02:11:52.719Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d31bb2ceca136d86b914f"
+    },
+    "name": "Start-ups & Innovation",
+    "short_desc": "Mô tả",
+    "long_desc": "Mô tả",
+    "priority": "5",
+    "state": "inactive",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2016-09-13T02:12:17.083Z"
+    },
+    "updatedAt": {
+      "$date": "2016-09-13T02:12:17.083Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d31be2ceca136d86b9150"
+    },
+    "name": "AI",
+    "short_desc": "Mô tả",
+    "long_desc": "Mô tả rất rất rất rất rất là chi tiết",
+    "priority": "2",
+    "state": "active",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2013-09-13T02:12:45.980Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-13T02:12:45.980Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d31c12ceca136d86b9151"
+    },
+    "name": "Business Automation",
+    "short_desc": "Mô tả",
+    "long_desc": "Mô tả chi tiết",
+    "priority": "2",
+    "state": "active",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2013-09-13T02:12:45.980Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-13T02:12:45.980Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d31c42ceca136d86b9152"
+    },
+    "name": "AI",
+    "short_desc": "Web học tập",
+    "long_desc": "Mô tả cực kỳ chi tiết",
+    "priority": "4",
+    "state": "inactive",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2015-09-13T02:13:40.096Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-13T02:13:40.096Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d31c72ceca136d86b9153"
+    },
+    "name": "E-Government",
+    "short_desc": "Mô tả",
+    "long_desc": "Mô tả cực kỳ chi tiết",
+    "priority": "4",
+    "state": "inactive",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2012-09-13T02:14:14.367Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-13T02:14:14.367Z"
+    },
+    "__v": 0
+  }
+]

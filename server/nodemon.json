@@ -1,0 +1,9 @@
+{
+  "env": {
+    "PORT": 5000,
+    "MONGO_USER": "tiendtfx22706",
+    "MONGO_PASSWORD": "alive%3Fdead",
+    "MONGO_DATABASE": "cluster0.igqaytd",
+    "MONGO_DEFAULT_DATABASE": "project-manager"
+  }
+}

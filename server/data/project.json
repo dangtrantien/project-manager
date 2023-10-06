@@ -1,0 +1,90 @@
+[
+  {
+    "_id": {
+      "$oid": "651a848d27884af7ce160621"
+    },
+    "name": "Website học tập",
+    "category": {
+      "$oid": "650d2e98bcdf03e7a4026502"
+    },
+    "projectState": {
+      "$oid": "650d41322ceca136d86b9165"
+    },
+    "techStacks": [
+      {
+        "$oid": "650d44e12ceca136d86b916c"
+      },
+      {
+        "$oid": "650d44ee2ceca136d86b9170"
+      },
+      {
+        "$oid": "650d44d72ceca136d86b9169"
+      }
+    ],
+    "departments": [
+      {
+        "$oid": "651a5d48f0bf0d0a7878ae89"
+      }
+    ],
+    "employees": [
+      {
+        "$oid": "651a5a45f2c2aa21231c1499"
+      },
+      {
+        "$oid": "651a37f77eeeb8d5ba04f347"
+      }
+    ],
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-10-02T08:51:25.590Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-02T08:51:25.590Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "651bcb684c8c2954055f50ba"
+    },
+    "name": "Test",
+    "category": {
+      "$oid": "650d2e98bcdf03e7a4026502"
+    },
+    "projectState": {
+      "$oid": "650d41322ceca136d86b9165"
+    },
+    "techStacks": [
+      {
+        "$oid": "650d44e12ceca136d86b916c"
+      },
+      {
+        "$oid": "650d44ee2ceca136d86b9170"
+      },
+      {
+        "$oid": "650d44d72ceca136d86b9169"
+      }
+    ],
+    "departments": [
+      {
+        "$oid": "651a5d48f0bf0d0a7878ae89"
+      }
+    ],
+    "employees": [
+      {
+        "$oid": "651655409b9a14403bf0f477"
+      },
+      {
+        "$oid": "651a37f77eeeb8d5ba04f347"
+      }
+    ],
+    "isDelete": true,
+    "createdAt": {
+      "$date": "2023-10-03T08:06:00.045Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-03T08:06:54.177Z"
+    },
+    "__v": 0
+  }
+]

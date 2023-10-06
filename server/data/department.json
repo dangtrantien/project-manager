@@ -1,0 +1,76 @@
+[
+  {
+    "_id": {
+      "$oid": "651a5d48f0bf0d0a7878ae89"
+    },
+    "name": "Dev",
+    "mission": "Nhiệm vụ",
+    "techStacks": [
+      {
+        "$oid": "650d44ee2ceca136d86b9170"
+      },
+      {
+        "$oid": "650d44e12ceca136d86b916c"
+      },
+      {
+        "$oid": "650d44d72ceca136d86b9169"
+      }
+    ],
+    "projects": [
+      {
+        "$oid": "651a848d27884af7ce160621"
+      },
+      {
+        "$oid": "651bcb684c8c2954055f50ba"
+      }
+    ],
+    "employees": [
+      {
+        "$oid": "651a5a45f2c2aa21231c1499"
+      },
+      {
+        "$oid": "651a37f77eeeb8d5ba04f347"
+      },
+      {
+        "$oid": "651655409b9a14403bf0f477"
+      }
+    ],
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-10-02T06:03:52.171Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-03T08:16:48.657Z"
+    },
+    "__v": 6
+  },
+  {
+    "_id": {
+      "$oid": "651a71af27884af7ce1602bb"
+    },
+    "name": "BA",
+    "mission": "Nhiệm vụ",
+    "techStacks": [
+      {
+        "$oid": "650d44da2ceca136d86b916a"
+      }
+    ],
+    "projects": [],
+    "employees": [
+      {
+        "$oid": "651a5985f2c2aa21231c146c"
+      },
+      {
+        "$oid": "651a44e2f2c2aa21231c0c2c"
+      }
+    ],
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-10-02T07:30:55.294Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-03T08:16:48.658Z"
+    },
+    "__v": 0
+  }
+]

@@ -1,0 +1,30 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 600px) {
+  .flex-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .state-container {
+    width: 20rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .flex-container {
+    flex-direction: row;
+  }
+}

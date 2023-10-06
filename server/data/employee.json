@@ -1,0 +1,250 @@
+[
+  {
+    "_id": {
+      "$oid": "651655409b9a14403bf0f477"
+    },
+    "fullName": "Đặng Trần Tiến",
+    "avatar": "http://localhost:5000/static/images/1695962432048-avatar.jpg",
+    "idCard": "001098036626",
+    "dob": "04/09/1998",
+    "gender": "male",
+    "phone": "0968034094",
+    "experience": "fresher",
+    "certificate": ["Chứng chỉ 1", "Chứng chỉ 2", "Chứng chỉ 3"],
+    "techStacks": [
+      {
+        "techStack": {
+          "$oid": "650d44ee2ceca136d86b9170"
+        },
+        "techStackExperience": "2 năm",
+        "framework": "react, react-redux, react-router-dom, axios, antd",
+        "_id": {
+          "$oid": "651655409b9a14403bf0f478"
+        }
+      }
+    ],
+    "projects": [
+      {
+        "$oid": "651bcb684c8c2954055f50ba"
+      }
+    ],
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-29T04:40:32.360Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-03T08:06:54.386Z"
+    },
+    "__v": 4
+  },
+  {
+    "_id": {
+      "$oid": "651a37f77eeeb8d5ba04f347"
+    },
+    "fullName": "Nguyễn Văn A",
+    "avatar": "http://localhost:5000/static/images/1696217079734-185295830_151396853662409_1650683544909100280_n.jpg",
+    "idCard": "012345678910",
+    "dob": "08/10/2000",
+    "gender": "male",
+    "phone": "1234567890",
+    "experience": "junior",
+    "certificate": [
+      "Chứng chỉ 1",
+      "Chứng chỉ 2",
+      "Chứng chỉ 3",
+      "Chứng chỉ 4",
+      "Chứng chỉ 5"
+    ],
+    "techStacks": [
+      {
+        "techStack": {
+          "$oid": "650d44e12ceca136d86b916c"
+        },
+        "techStackExperience": "2 năm 6 tháng",
+        "framework": "ExpressJS",
+        "_id": {
+          "$oid": "651a422df2c2aa21231c0bf7"
+        }
+      },
+      {
+        "techStack": {
+          "$oid": "650d44ee2ceca136d86b9170"
+        },
+        "techStackExperience": "3 năm 1 tháng",
+        "framework": "React, redux",
+        "_id": {
+          "$oid": "651a422df2c2aa21231c0bf8"
+        }
+      }
+    ],
+    "projects": [
+      {
+        "$oid": "651a848d27884af7ce160621"
+      },
+      {
+        "$oid": "651bcb684c8c2954055f50ba"
+      }
+    ],
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-10-02T03:24:39.951Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-03T08:06:54.390Z"
+    },
+    "__v": 2
+  },
+  {
+    "_id": {
+      "$oid": "651a44e2f2c2aa21231c0c2c"
+    },
+    "fullName": "Phạm Trọng B",
+    "avatar": "http://localhost:5000/static/images/1696220386267-184616578_157730723029022_8689122801987825949_n.jpg",
+    "idCard": "012345678911",
+    "dob": "12/05/1993",
+    "gender": "male",
+    "phone": "1234567890",
+    "experience": "senior",
+    "certificate": [
+      "Chứng chỉ 1",
+      "Chứng chỉ 2",
+      "Chứng chỉ 3",
+      "Chứng chỉ 4",
+      "Chứng chỉ 5",
+      "Chứng chỉ 6"
+    ],
+    "techStacks": [
+      {
+        "techStack": {
+          "$oid": "650d44ee2ceca136d86b9170"
+        },
+        "techStackExperience": "4 năm 7 tháng",
+        "framework": "Framework",
+        "_id": {
+          "$oid": "651a44e2f2c2aa21231c0c2d"
+        }
+      },
+      {
+        "techStack": {
+          "$oid": "650d44da2ceca136d86b916a"
+        },
+        "techStackExperience": "5 năm 2 tháng",
+        "framework": "Framework",
+        "_id": {
+          "$oid": "651a44e2f2c2aa21231c0c2e"
+        }
+      },
+      {
+        "techStack": {
+          "$oid": "650d44d72ceca136d86b9169"
+        },
+        "techStackExperience": "2 năm 4 tháng",
+        "framework": "Framework",
+        "_id": {
+          "$oid": "651a44e2f2c2aa21231c0c2f"
+        }
+      },
+      {
+        "techStack": {
+          "$oid": "650d44e12ceca136d86b916c"
+        },
+        "techStackExperience": "5 năm 3 tháng",
+        "framework": "Framework",
+        "_id": {
+          "$oid": "651a44e2f2c2aa21231c0c30"
+        }
+      }
+    ],
+    "projects": [],
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-10-02T04:19:46.638Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-02T04:19:46.638Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "651a5985f2c2aa21231c146c"
+    },
+    "fullName": "Đinh Thị Thùy C",
+    "avatar": "http://localhost:5000/static/images/1696225668774-IMG_1009a.jpg",
+    "idCard": "012345678912",
+    "dob": "03/10/1993",
+    "gender": "female",
+    "phone": "1234567890",
+    "experience": "senior",
+    "certificate": [],
+    "techStacks": [
+      {
+        "techStack": {
+          "$oid": "650d44da2ceca136d86b916a"
+        },
+        "techStackExperience": "5 năm",
+        "framework": "Framework",
+        "_id": {
+          "$oid": "651bd51e6aadd6654169eae6"
+        }
+      }
+    ],
+    "projects": [],
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-10-02T05:47:49.181Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-03T08:47:26.241Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "651a5a45f2c2aa21231c1499"
+    },
+    "fullName": "Miss D",
+    "avatar": "http://localhost:5000/static/images/1696225861588-1356275836021ea.jpg",
+    "idCard": "012345678913",
+    "dob": "03/10/1999",
+    "gender": "female",
+    "phone": "1234567890",
+    "experience": "fresher",
+    "certificate": [],
+    "techStacks": [
+      {
+        "techStack": {
+          "$oid": "650d44ee2ceca136d86b9170"
+        },
+        "techStackExperience": "1 năm 4 tháng",
+        "framework": "react, react-redux, react-router-dom, axios, antd",
+        "_id": {
+          "$oid": "651bd5426aadd6654169eb44"
+        }
+      },
+      {
+        "techStack": {
+          "$oid": "650d44e12ceca136d86b916c"
+        },
+        "techStackExperience": "9 tháng",
+        "framework": "Framework",
+        "_id": {
+          "$oid": "651bd5426aadd6654169eb45"
+        }
+      }
+    ],
+    "projects": [
+      {
+        "$oid": "651a848d27884af7ce160621"
+      }
+    ],
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-10-02T05:51:01.788Z"
+    },
+    "updatedAt": {
+      "$date": "2023-10-03T08:48:02.698Z"
+    },
+    "__v": 0
+  }
+]

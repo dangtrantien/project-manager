@@ -1,0 +1,87 @@
+[
+  {
+    "_id": {
+      "$oid": "650d40f90110b79f64598c4b"
+    },
+    "name": "Termination",
+    "short_desc": "Mô tả",
+    "long_desc": "Mô tả chi tiết",
+    "state": "inactive",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:10:38.516Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:10:44.246Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d41292ceca136d86b9162"
+    },
+    "name": "Release & Support Customer",
+    "short_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "long_desc": "Mô tả chi tiết",
+    "state": "inactive",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:10:25.528Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:10:25.528Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d412c2ceca136d86b9163"
+    },
+    "name": "Iterative Construction",
+    "short_desc": "Mô tả",
+    "long_desc": "Mô tả chi tiết",
+    "state": "inactive",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:09:34.114Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:09:34.114Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d412f2ceca136d86b9164"
+    },
+    "name": "System Analysis",
+    "short_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "long_desc": "Mô tả chi tiết",
+    "state": "active",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:08:54.306Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:08:54.306Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d41322ceca136d86b9165"
+    },
+    "name": "Initiation",
+    "short_desc": "Mô tả",
+    "long_desc": "Mô tả chi tiết",
+    "state": "active",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:08:13.019Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:08:13.022Z"
+    },
+    "__v": 0
+  }
+]

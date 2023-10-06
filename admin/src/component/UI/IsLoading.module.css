@@ -1,0 +1,43 @@
+.loading-container {
+  width: 25rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading {
+  width: 100%;
+  height: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 1.5rem;
+  position: relative;
+}
+
+.color {
+  width: 0;
+  height: 100%;
+  border-radius: 1.5rem;
+  background-color: #000;
+  position: absolute;
+  animation: loading 2s infinite linear;
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 50%;
+  }
+  50% {
+    width: 75%;
+  }
+  75% {
+    width: 85%;
+  }
+  100% {
+    width: 100%;
+  }
+}

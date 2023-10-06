@@ -1,0 +1,32 @@
+.button-container {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.control-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.label {
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 600px) {
+  .button-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (min-width: 1200px) {
+  .button-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

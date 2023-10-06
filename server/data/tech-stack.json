@@ -1,0 +1,189 @@
+[
+  {
+    "_id": {
+      "$oid": "650d44a80110b79f64598c64"
+    },
+    "name": "C",
+    "short_desc": "Mô tả",
+    "long_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "state": "inactive",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:20:59.311Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:20:59.311Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d44d12ceca136d86b9167"
+    },
+    "name": "Ruby",
+    "short_desc": "Mô tả",
+    "long_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "state": "inactive",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:20:33.294Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:20:33.294Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d44d42ceca136d86b9168"
+    },
+    "name": "C++",
+    "short_desc": "Mô tả",
+    "long_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "state": "inactive",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:20:08.332Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:20:08.332Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d44d72ceca136d86b9169"
+    },
+    "name": "MongoDB",
+    "short_desc": "Mô tả",
+    "long_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "state": "active",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:14:23.832Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:14:23.832Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d44da2ceca136d86b916a"
+    },
+    "name": ".NET",
+    "short_desc": "Mô tả",
+    "long_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "state": "active",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:14:10.474Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:17:23.109Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d44dd2ceca136d86b916b"
+    },
+    "name": "MySQL",
+    "short_desc": "Mô tả",
+    "long_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "state": "inactive",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:13:58.483Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:13:58.483Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d44e12ceca136d86b916c"
+    },
+    "name": "Javascript",
+    "short_desc": "Mô tả",
+    "long_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "state": "active",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:12:59.210Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:12:59.210Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d44e42ceca136d86b916d"
+    },
+    "name": "NodeJs",
+    "short_desc": "Mô tả",
+    "long_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "state": "inactive",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:12:03.377Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:12:03.377Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d44e72ceca136d86b916e"
+    },
+    "name": "Python",
+    "short_desc": "Mô tả",
+    "long_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "state": "inactive",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:11:37.956Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:20:01.040Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d44ea2ceca136d86b916f"
+    },
+    "name": "Java",
+    "short_desc": "Mô tả",
+    "long_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "state": "inactive",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:11:30.043Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:11:30.043Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "650d44ee2ceca136d86b9170"
+    },
+    "name": "ReactJs",
+    "short_desc": "Mô tả",
+    "long_desc": "Một câu mô tả rất rất rất rất rất rất là dài",
+    "state": "active",
+    "isDelete": false,
+    "createdAt": {
+      "$date": "2023-09-14T02:11:20.422Z"
+    },
+    "updatedAt": {
+      "$date": "2023-09-14T02:11:20.422Z"
+    },
+    "__v": 0
+  }
+]

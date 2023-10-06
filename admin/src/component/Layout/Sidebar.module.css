@@ -1,0 +1,145 @@
+.container {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.header-container {
+  padding: 1rem 1.8rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.button-mobile-nav {
+  display: block;
+  cursor: pointer;
+}
+
+.nav {
+  width: max-content;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #fff;
+  position: absolute;
+  transform: translateX(-100%);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.5s ease-in;
+}
+
+.icon-mobile[name='close'] {
+  display: none;
+}
+
+.nav-open .nav {
+  width: 100%;
+  min-height: 100vh;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.nav-open .icon-mobile[name='menu'] {
+  display: none;
+}
+
+.nav-open .icon-mobile[name='close'] {
+  display: block;
+}
+
+.nav p {
+  color: #777;
+  text-transform: uppercase;
+}
+
+.nav ul {
+  margin-top: 1rem;
+}
+
+.nav a:link,
+.nav a:visited {
+  width: 100%;
+  padding: 1rem;
+  color: #364fc7;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav a:hover,
+.nav a.active {
+  background-color: #e7f5ff;
+}
+
+.logout-button {
+  width: fit-content;
+  color: #364fc7 !important;
+  background-color: inherit !important;
+  border: 1px solid #364fc7 !important;
+}
+
+.logout-button:hover,
+.logout-button:active {
+  color: #fff !important;
+  background-color: #364fc7 !important;
+}
+
+@media only screen and (min-width: 600px) {
+}
+
+@media only screen and (min-width: 768px) {
+  .header-container {
+    font-size: 2.4rem;
+  }
+
+  .profile-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    border-right: 1px solid #ddd;
+    box-shadow: none;
+  }
+
+  .header-container {
+    padding: 1rem;
+    justify-content: center;
+  }
+
+  .button-mobile-nav {
+    display: none;
+  }
+
+  .nav {
+    position: static;
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+}
