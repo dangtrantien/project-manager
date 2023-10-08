@@ -10,6 +10,8 @@ import {
 } from 'antd';
 import axios from 'axios';
 
+import { host } from '../../store';
+
 import style from './AuthWrapper.module.css';
 
 // ==================================================
@@ -23,7 +25,7 @@ const LoginForm = () => {
 
   const submitHandler = (formValue) => {
     axios
-      .post('/api/login', JSON.stringify(formValue), {
+      .post(`${host}/api/login`, JSON.stringify(formValue), {
         headers: {
           'Content-Type': 'application/json',
         },

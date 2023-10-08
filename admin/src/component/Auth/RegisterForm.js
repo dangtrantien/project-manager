@@ -2,6 +2,8 @@ import { useNavigate, Link } from 'react-router-dom';
 import { Button, Form, Input, message, notification } from 'antd';
 import axios from 'axios';
 
+import { host } from '../../store';
+
 import style from './AuthWrapper.module.css';
 
 // ==================================================
@@ -15,7 +17,7 @@ const RegisterForm = () => {
 
   const submitHandler = (formValue) => {
     axios
-      .post('/api/register', JSON.stringify(formValue), {
+      .post(`${host}/api/register`, JSON.stringify(formValue), {
         headers: {
           'Content-Type': 'application/json',
         },
