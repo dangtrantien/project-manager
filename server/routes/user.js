@@ -9,7 +9,7 @@ const isAuth = require('../middleware/isAuth');
 
 const router = express.Router();
 
-router.get('/user', userController.getUser);
+router.get('/user', isAuth, userController.getUser);
 
 router.post('/login', userController.postLogin);
 

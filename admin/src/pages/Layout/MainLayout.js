@@ -14,7 +14,9 @@ const MainLayout = () => {
 
   useEffect(() => {
     axios
-      .get('/api/user', { withCredentials: true })
+      .get('https://pm-server-dangtrantien.vercel.app/api/user', {
+        withCredentials: true,
+      })
       .then((res) => {
         console.log(res.data);
         dispatch(userActions.replaceUserState(res.data));

@@ -58,18 +58,18 @@ app.use(
 );
 app.use('/static', express.static(path.join(__dirname, 'public')));
 app.set('trust proxy', 1);
-// app.use(
-//   session({
-//     secret: 'session',
-//     resave: false,
-//     saveUninitialized: false,
-//     store: store,
-//     cookie: {
-//       expires: Date.now() * 1000 * 60 * 60 * 24 * 3,
-//       maxAge: 1000 * 60 * 60 * 24 * 3,
-//     },
-//   })
-// );
+app.use(
+  session({
+    secret: 'session',
+    resave: false,
+    saveUninitialized: false,
+    store: store,
+    cookie: {
+      expires: Date.now() * 1000 * 60 * 60 * 24 * 3,
+      maxAge: 1000 * 60 * 60 * 24 * 3,
+    },
+  })
+);
 
 // Route api
 Router(app);
