@@ -12,7 +12,7 @@ module.exports = (req, res, next) => {
 
   // Kiểm tra xem có token hay không
   if (!decodedToken) {
-    const error = new Error(`Chưa đăng nhập, sessionID: ${req.sessionID}`);
+    const error = new Error('Chưa đăng nhập');
 
     error.statusCode = 401;
 

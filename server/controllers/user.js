@@ -154,7 +154,6 @@ exports.postRegister = async (req, res, next) => {
 
 // Đăng xuất
 exports.getLogout = (req, res, next) => {
-  console.log(req.sessionID);
   // Xóa cookie của current user
   req.session.destroy((err) => {
     console.log(err);
