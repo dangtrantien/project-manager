@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Form, Input, Select, Button, message, notification } from 'antd';
 import axios from 'axios';
 
+import { host } from '../../../store';
+
 import style from './NewTechStack.module.css';
 import HiTechMobilePhone from '../../../asset/images/Lovepik_com-400275991-hi-tech-mobile-phone.webp';
 
@@ -19,11 +21,11 @@ const NewTechStack = () => {
   const [messageApi, messageContextHolder] = message.useMessage();
 
   const submitHandler = (value) => {
-    let url = '/api/admin/tech-stack/create';
+    let url = `${host}/api/admin/tech-stack/create`;
     let method = 'post';
 
     if (state?.isEdit) {
-      url = `/api/admin/tech-stack/edit/${state._id}`;
+      url = `${host}/api/admin/tech-stack/edit/${state._id}`;
       method = 'put';
     }
 

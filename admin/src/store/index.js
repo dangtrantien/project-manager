@@ -21,3 +21,6 @@ export const store = configureStore({
     project: projectReducer,
   },
 });
+
+export const host = 'https://pm-server-dangtrantien.vercel.app';
+// export const host = 'http://localhost:3000';

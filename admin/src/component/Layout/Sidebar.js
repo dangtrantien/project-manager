@@ -2,6 +2,8 @@ import { useNavigate, NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 
+import { host } from '../../store';
+
 import style from './Sidebar.module.css';
 import { GoProjectRoadmap } from 'react-icons/go';
 import { BsListCheck, BsDatabase } from 'react-icons/bs';
@@ -20,7 +22,7 @@ const Sidebar = () => {
   const user = useSelector((state) => state.user);
 
   const logoutHandler = async () => {
-    await axios.post('/api/logout');
+    await axios.post(`${host}/api/logout`);
 
     return navigate('/login', { replace: true });
   };

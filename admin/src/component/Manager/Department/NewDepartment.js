@@ -16,6 +16,7 @@ import { getDepartmentData } from '../../../store/department/actions';
 import { getTechStackData } from '../../../store/tech-stack/actions';
 import { getProjectData } from '../../../store/project/actions';
 import EmployeeSelect from '../../UI/Button/EmployeeSelect';
+import { host } from '../../../store';
 
 // ==================================================
 
@@ -41,11 +42,11 @@ const NewDepartment = () => {
   };
 
   const submitHandler = (value) => {
-    let url = '/api/admin/department/create';
+    let url = `${host}/api/admin/department/create`;
     let method = 'post';
 
     if (state?.isEdit) {
-      url = `/api/admin/department/edit/${state._id}`;
+      url = `${host}/api/admin/department/edit/${state._id}`;
       method = 'put';
     }
 

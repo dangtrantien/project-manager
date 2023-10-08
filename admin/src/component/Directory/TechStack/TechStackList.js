@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import useFilterSearch from '../../../hooks/useFilterSearch';
 import TechStackDetail from './TechStackDetail';
+import { host } from '../../../store';
 
 import { BiSolidEditAlt } from 'react-icons/bi';
 import { BsEyeFill, BsFillTrash3Fill } from 'react-icons/bs';
@@ -51,11 +52,11 @@ const TechStackList = () => {
       title: 'Bạn có chắc chắn muốn xóa dữ liệu?',
       okType: 'danger',
       onOk() {
-        let url = `/api/admin/tech-stack/delete-one/${id}`;
+        let url = `${host}/api/admin/tech-stack/delete-one/${id}`;
         let data = null;
 
         if (multiple === 'multiple') {
-          url = '/api/admin/tech-stack/delete-many';
+          url = `${host}/api/admin/tech-stack/delete-many`;
           data = id;
         }
 

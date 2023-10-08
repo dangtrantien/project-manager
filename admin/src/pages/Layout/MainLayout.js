@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import { userActions } from '../../store/user/slice';
 import Sidebar from '../../component/Layout/Sidebar';
+import { host } from '../../store';
 
 // ==================================================
 
@@ -14,7 +15,7 @@ const MainLayout = () => {
 
   useEffect(() => {
     axios
-      .get('https://pm-server-dangtrantien.vercel.app/api/user', {
+      .get(`${host}/api/user`, {
         withCredentials: true,
       })
       .then((res) => {

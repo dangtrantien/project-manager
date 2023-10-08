@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import useFilterSearch from '../../../hooks/useFilterSearch';
 import CategoryDetail from './CategoryDetail';
+import { host } from '../../../store';
 
 import { BiSolidEditAlt } from 'react-icons/bi';
 import { BsEyeFill, BsFillTrash3Fill } from 'react-icons/bs';
@@ -32,7 +33,7 @@ const CategoryList = () => {
     setLoading(true);
 
     axios
-      .get('/api/admin/project-category/get-active-list')
+      .get(`${host}/api/admin/project-category/get-active-list`)
       .then((res) => {
         const dataList = res.data.data.map((val, i) => {
           return { ...val, key: val._id, index: i + 1 };
@@ -51,11 +52,11 @@ const CategoryList = () => {
       title: 'Bạn có chắc chắn muốn xóa dữ liệu?',
       okType: 'danger',
       onOk() {
-        let url = `/api/admin/project-category/delete-one/${id}`;
+        let url = `${host}/api/admin/project-category/delete-one/${id}`;
         let data = null;
 
         if (multiple === 'multiple') {
-          url = '/api/admin/project-category/delete-many';
+          url = `${host}/api/admin/project-category/delete-many`;
           data = id;
         }
 

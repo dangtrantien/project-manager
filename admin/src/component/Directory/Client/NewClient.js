@@ -11,6 +11,8 @@ import {
 } from 'antd';
 import axios from 'axios';
 
+import { host } from '../../../store';
+
 import style from './NewClient.module.css';
 import Meeting from '../../../asset/images/Lovepik_com-400396590-staff-in-workplace-materials.webp';
 
@@ -27,11 +29,11 @@ const NewClient = () => {
   const [messageApi, messageContextHolder] = message.useMessage();
 
   const submitHandler = (value) => {
-    let url = '/api/admin/client/create';
+    let url = `${host}/api/admin/client/create`;
     let method = 'post';
 
     if (state?.isEdit) {
-      url = `/api/admin/client/edit/${state._id}`;
+      url = `${host}/api/admin/client/edit/${state._id}`;
       method = 'put';
     }
 

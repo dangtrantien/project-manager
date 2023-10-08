@@ -4,6 +4,8 @@ import { Column } from '@ant-design/plots';
 import dayjs from 'dayjs';
 import axios from 'axios';
 
+import { host } from '../../../store';
+
 import { LoadingOutlined } from '@ant-design/icons';
 
 // ==================================================
@@ -19,15 +21,15 @@ const TotalProjectChart = () => {
     setLoading(true);
 
     const category = await axios.get(
-      `/api/admin/report/project/category?year=${year}`
+      `${host}/api/admin/report/project/category?year=${year}`
     );
 
     const projectState = await axios.get(
-      `/api/admin/report/project/project-state?year=${year}`
+      `${host}/api/admin/report/project/project-state?year=${year}`
     );
 
     const techStack = await axios.get(
-      `/api/admin/report/project/tech-stack?year=${year}`
+      `${host}/api/admin/report/project/tech-stack?year=${year}`
     );
 
     setCategoryData(category.data);

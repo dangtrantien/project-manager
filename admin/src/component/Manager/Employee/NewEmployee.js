@@ -17,6 +17,7 @@ import dayjs from 'dayjs';
 import axios from 'axios';
 
 import { getTechStackData } from '../../../store/tech-stack/actions';
+import { host } from '../../../store';
 
 import style from './NewEmployee.module.css';
 import {
@@ -74,11 +75,11 @@ const NewEmployee = () => {
     });
   };
   const submitHandler = (value) => {
-    let url = '/api/admin/employee/create';
+    let url = `${host}/api/admin/employee/create`;
     let method = 'post';
 
     if (state?.isEdit) {
-      url = `/api/admin/employee/edit/${state._id}`;
+      url = `${host}/api/admin/employee/edit/${state._id}`;
       method = 'put';
     }
 

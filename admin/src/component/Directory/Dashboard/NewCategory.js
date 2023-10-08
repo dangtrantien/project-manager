@@ -11,6 +11,8 @@ import {
 } from 'antd';
 import axios from 'axios';
 
+import { host } from '../../../store';
+
 import style from './NewCategory.module.css';
 import PrototypeWithBulbConcept from '../../../asset/images/Prototype-with-bulb-concept-of-project-development.webp';
 
@@ -27,11 +29,11 @@ const NewCategory = () => {
   const [messageApi, messageContextHolder] = message.useMessage();
 
   const submitHandler = (value) => {
-    let url = '/api/admin/project-category/create';
+    let url = `${host}/api/admin/project-category/create`;
     let method = 'post';
 
     if (state?.isEdit) {
-      url = `/api/admin/project-category/edit/${state._id}`;
+      url = `${host}/api/admin/project-category/edit/${state._id}`;
       method = 'put';
     }
 

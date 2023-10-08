@@ -1,12 +1,14 @@
 import { projectStateActions } from './slice';
 import axios from 'axios';
 
+import { host } from '../index';
+
 // ==================================================
 
 export const getProjectStateData = () => {
   return async (dispatch) => {
     const response = await axios.get(
-      '/api/admin/project-state/get-active-list'
+      `${host}/api/admin/project-state/get-active-list`
     );
 
     const dataList = response.data.data.map((val, i) => {

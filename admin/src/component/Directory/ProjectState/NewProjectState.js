@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Form, Input, Select, Button, message, notification } from 'antd';
 import axios from 'axios';
 
+import { host } from '../../../store';
+
 import style from './NewProjectState.module.css';
 import ProjectStrategy from '../../../asset/images/project-strategy.webp';
 
@@ -19,11 +21,11 @@ const NewProjectState = () => {
   const [messageApi, messageContextHolder] = message.useMessage();
 
   const submitHandler = (value) => {
-    let url = '/api/admin/project-state/create';
+    let url = `${host}/api/admin/project-state/create`;
     let method = 'post';
 
     if (state?.isEdit) {
-      url = `/api/admin/project-state/edit/${state._id}`;
+      url = `${host}/api/admin/project-state/edit/${state._id}`;
       method = 'put';
     }
 

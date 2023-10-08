@@ -4,6 +4,7 @@ import { Button, Modal, Space, Table, Tooltip, message } from 'antd';
 import axios from 'axios';
 
 import useFilterSearch from '../../../hooks/useFilterSearch';
+import { host } from '../../../store';
 
 import { BiSolidEditAlt } from 'react-icons/bi';
 import { BsEyeFill, BsFillTrash3Fill } from 'react-icons/bs';
@@ -46,11 +47,11 @@ const ProjectList = () => {
       title: 'Bạn có chắc chắn muốn xóa dữ liệu?',
       okType: 'danger',
       onOk() {
-        let url = `/api/admin/project/delete-one/${id}`;
+        let url = `${host}/api/admin/project/delete-one/${id}`;
         let data = null;
 
         if (multiple === 'multiple') {
-          url = '/api/admin/project/delete-many';
+          url = `${host}/api/admin/project/delete-many`;
           data = id;
         }
 

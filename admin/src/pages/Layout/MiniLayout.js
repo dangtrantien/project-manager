@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { useNavigate, Outlet } from 'react-router-dom';
 import axios from 'axios';
 
+import { host } from '../../store';
+
 // ==================================================
 
 const MiniLayout = () => {
@@ -9,7 +11,9 @@ const MiniLayout = () => {
 
   useEffect(() => {
     axios
-      .get('/api/user', { withCredentials: true })
+      .get(`${host}/api/user`, {
+        withCredentials: true,
+      })
       .then(() => navigate('/dashboard', { replace: true }))
       .catch((error) => {
         console.log(error);

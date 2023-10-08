@@ -1,12 +1,14 @@
 import { projectCategoryActions } from './slice';
 import axios from 'axios';
 
+import { host } from '../index';
+
 // ==================================================
 
 export const getCategoryData = () => {
   return async (dispatch) => {
     const response = await axios.get(
-      '/api/admin/project-category/get-active-list'
+      `${host}/api/admin/project-category/get-active-list`
     );
 
     const dataList = response.data.data.map((val, i) => {

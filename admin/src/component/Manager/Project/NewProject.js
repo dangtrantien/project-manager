@@ -17,6 +17,7 @@ import { getProjectStateData } from '../../../store/project-state/actions';
 import { getTechStackData } from '../../../store/tech-stack/actions';
 import { getDepartmentData } from '../../../store/department/actions';
 import EmployeeSelect from '../../UI/Button/EmployeeSelect';
+import { host } from '../../../store';
 
 // ==================================================
 
@@ -57,11 +58,11 @@ const NewProject = () => {
   };
 
   const submitHandler = (value) => {
-    let url = '/api/admin/project/create';
+    let url = `${host}/api/admin/project/create`;
     let method = 'post';
 
     if (state?.isEdit) {
-      url = `/api/admin/project/edit/${state._id}`;
+      url = `${host}/api/admin/project/edit/${state._id}`;
       method = 'put';
     }
 

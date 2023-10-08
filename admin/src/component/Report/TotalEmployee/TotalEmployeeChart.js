@@ -3,6 +3,8 @@ import { Space, Spin } from 'antd';
 import { Pie, Column } from '@ant-design/plots';
 import axios from 'axios';
 
+import { host } from '../../../store';
+
 import style from './TotalEmployeeChart.module.css';
 import { LoadingOutlined } from '@ant-design/icons';
 
@@ -17,12 +19,16 @@ const TotalEmployeeChart = () => {
   const getData = useCallback(async () => {
     setLoading(true);
 
-    const experience = await axios.get('/api/admin/report/employee/experience');
+    const experience = await axios.get(
+      `${host}/api/admin/report/employee/experience`
+    );
 
-    const techStack = await axios.get('/api/admin/report/employee/tech-stack');
+    const techStack = await axios.get(
+      `${host}/api/admin/report/employee/tech-stack`
+    );
 
     const joinedProject = await axios.get(
-      '/api/admin/report/employee/joined-project'
+      `${host}/api/admin/report/employee/joined-project`
     );
 
     setExperienceData(experience.data);

@@ -12,6 +12,7 @@ import {
 import axios from 'axios';
 
 import useFilterSearch from '../../../hooks/useFilterSearch';
+import { host } from '../../../store';
 
 import { BiSolidEditAlt } from 'react-icons/bi';
 import { BsEyeFill, BsFillTrash3Fill } from 'react-icons/bs';
@@ -56,11 +57,11 @@ const DepartmentList = () => {
       title: 'Bạn có chắc chắn muốn xóa dữ liệu?',
       okType: 'danger',
       onOk() {
-        let url = `/api/admin/department/delete-one/${id}`;
+        let url = `${host}/api/admin/department/delete-one/${id}`;
         let data = null;
 
         if (multiple === 'multiple') {
-          url = '/api/admin/department/delete-many';
+          url = `${host}/api/admin/department/delete-many`;
           data = id;
         }
 
