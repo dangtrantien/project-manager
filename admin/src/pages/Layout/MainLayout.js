@@ -18,10 +18,7 @@ const MainLayout = () => {
       .get(`${host}/api/user`, {
         withCredentials: true,
       })
-      .then((res) => {
-        console.log(res.data);
-        dispatch(userActions.replaceUserState(res.data));
-      })
+      .then((res) => dispatch(userActions.replaceUserState(res.data)))
       .catch((error) => {
         console.log(error);
 
