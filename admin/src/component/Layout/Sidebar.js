@@ -22,7 +22,9 @@ const Sidebar = () => {
   const user = useSelector((state) => state.user);
 
   const logoutHandler = async () => {
-    await axios.post(`${host}/api/logout`);
+    await axios.get(`${host}/api/logout`, {
+      withCredentials: true,
+    });
 
     return navigate('/login', { replace: true });
   };

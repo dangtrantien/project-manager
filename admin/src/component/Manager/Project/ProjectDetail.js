@@ -16,7 +16,9 @@ const ProjectDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`${host}/api/admin/project/get-detail/${projectId}`)
+      .get(`${host}/api/admin/project/get-detail/${projectId}`, {
+        withCredentials: true,
+      })
       .then((res) => setProject(res.data))
       .catch((error) => console.log(error));
   }, [projectId]);

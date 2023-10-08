@@ -7,6 +7,7 @@ const User = require('../models/User');
 // ==================================================
 
 module.exports = (req, res, next) => {
+  console.log(req.sessionID);
   const token = req.session.token;
   const decodedToken = jwt.decode(token, 'supersecrettoken');
 

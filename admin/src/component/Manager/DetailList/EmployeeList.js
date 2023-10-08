@@ -23,7 +23,9 @@ const EmployeeList = ({ data }) => {
     setLoading(true);
 
     axios
-      .get(`${host}/api/admin/employee/get-active-list`)
+      .get(`${host}/api/admin/employee/get-active-list`, {
+        withCredentials: true,
+      })
       .then((res) => {
         const resList = res.data.data.map((val, i) => {
           return { ...val, key: val._id, index: i + 1 };

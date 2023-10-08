@@ -21,15 +21,24 @@ const TotalProjectChart = () => {
     setLoading(true);
 
     const category = await axios.get(
-      `${host}/api/admin/report/project/category?year=${year}`
+      `${host}/api/admin/report/project/category?year=${year}`,
+      {
+        withCredentials: true,
+      }
     );
 
     const projectState = await axios.get(
-      `${host}/api/admin/report/project/project-state?year=${year}`
+      `${host}/api/admin/report/project/project-state?year=${year}`,
+      {
+        withCredentials: true,
+      }
     );
 
     const techStack = await axios.get(
-      `${host}/api/admin/report/project/tech-stack?year=${year}`
+      `${host}/api/admin/report/project/tech-stack?year=${year}`,
+      {
+        withCredentials: true,
+      }
     );
 
     setCategoryData(category.data);

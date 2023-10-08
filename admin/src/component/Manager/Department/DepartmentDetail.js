@@ -17,7 +17,9 @@ const DepartmentDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`${host}/api/admin/department/get-detail/${departmentId}`)
+      .get(`${host}/api/admin/department/get-detail/${departmentId}`, {
+        withCredentials: true,
+      })
       .then((res) => setDepartment(res.data))
       .catch((error) => console.log(error));
   }, [departmentId]);

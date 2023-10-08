@@ -18,7 +18,9 @@ const EmployeeDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`${host}/api/admin/employee/get-detail/${employeeId}`)
+      .get(`${host}/api/admin/employee/get-detail/${employeeId}`, {
+        withCredentials: true,
+      })
       .then((res) => setEmployee(res.data))
       .catch((error) => console.log(error));
   }, [employeeId]);

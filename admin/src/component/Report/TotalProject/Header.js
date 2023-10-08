@@ -23,12 +23,16 @@ const Header = () => {
     dispatch(getProjectData());
 
     axios
-      .get(`${host}/api/admin/project/get-all-list`)
+      .get(`${host}/api/admin/project/get-all-list`, {
+        withCredentials: true,
+      })
       .then((res) => setTotalProject(res.data.total))
       .catch((error) => console.log(error));
 
     axios
-      .get(`${host}/api/admin/project/get-deleted-list`)
+      .get(`${host}/api/admin/project/get-deleted-list`, {
+        withCredentials: true,
+      })
       .then((res) => setTotalDeletedProject(res.data.total))
       .catch((error) => console.log(error));
   }, [dispatch]);

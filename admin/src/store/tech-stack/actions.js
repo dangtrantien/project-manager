@@ -8,7 +8,10 @@ import { host } from '../index';
 export const getTechStackData = () => {
   return async (dispatch) => {
     const response = await axios.get(
-      `${host}/api/admin/tech-stack/get-active-list`
+      `${host}/api/admin/tech-stack/get-active-list`,
+      {
+        withCredentials: true,
+      }
     );
 
     const dataList = response.data.data.map((val, i) => {

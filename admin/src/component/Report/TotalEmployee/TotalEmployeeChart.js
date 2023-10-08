@@ -20,15 +20,24 @@ const TotalEmployeeChart = () => {
     setLoading(true);
 
     const experience = await axios.get(
-      `${host}/api/admin/report/employee/experience`
+      `${host}/api/admin/report/employee/experience`,
+      {
+        withCredentials: true,
+      }
     );
 
     const techStack = await axios.get(
-      `${host}/api/admin/report/employee/tech-stack`
+      `${host}/api/admin/report/employee/tech-stack`,
+      {
+        withCredentials: true,
+      }
     );
 
     const joinedProject = await axios.get(
-      `${host}/api/admin/report/employee/joined-project`
+      `${host}/api/admin/report/employee/joined-project`,
+      {
+        withCredentials: true,
+      }
     );
 
     setExperienceData(experience.data);

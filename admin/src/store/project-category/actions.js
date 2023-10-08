@@ -8,7 +8,10 @@ import { host } from '../index';
 export const getCategoryData = () => {
   return async (dispatch) => {
     const response = await axios.get(
-      `${host}/api/admin/project-category/get-active-list`
+      `${host}/api/admin/project-category/get-active-list`,
+      {
+        withCredentials: true,
+      }
     );
 
     const dataList = response.data.data.map((val, i) => {

@@ -8,7 +8,10 @@ import { host } from '../index';
 export const getDepartmentData = () => {
   return async (dispatch) => {
     const response = await axios.get(
-      `${host}/api/admin/department/get-active-list`
+      `${host}/api/admin/department/get-active-list`,
+      {
+        withCredentials: true,
+      }
     );
 
     const dataList = response.data.data.map((val, i) => {

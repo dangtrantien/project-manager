@@ -74,7 +74,7 @@ exports.postLogin = async (req, res, next) => {
       'supersecrettoken'
     );
 
-    // req.session.token = token;
+    req.session.token = token;
 
     res.status(200).json({ message: 'Đăng nhập thành công!', token: token });
   } catch (error) {
@@ -153,7 +153,8 @@ exports.postRegister = async (req, res, next) => {
 };
 
 // Đăng xuất
-exports.postLogout = (req, res, next) => {
+exports.getLogout = (req, res, next) => {
+  console.log(req.sessionID);
   // Xóa cookie của current user
   req.session.destroy((err) => {
     console.log(err);
