@@ -66,7 +66,7 @@ app.use(
     store: store,
     cookie: {
       sameSite: 'none',
-      secure: true,
+      secure: 'auto',
       expires: Date.now() * 1000 * 60 * 60 * 24 * 3,
       maxAge: 1000 * 60 * 60 * 24 * 3,
       httpOnly: true,
