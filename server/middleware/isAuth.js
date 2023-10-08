@@ -7,13 +7,12 @@ const User = require('../models/User');
 // ==================================================
 
 module.exports = (req, res, next) => {
-  console.log(req.sessionID);
   const token = req.session.token;
   const decodedToken = jwt.decode(token, 'supersecrettoken');
 
   // Kiểm tra xem có token hay không
   if (!decodedToken) {
-    const error = new Error('Chưa đăng nhập');
+    const error = new Error(`Chưa đăng nhập, sessionID: ${req.sessionID}`);
 
     error.statusCode = 401;
 
