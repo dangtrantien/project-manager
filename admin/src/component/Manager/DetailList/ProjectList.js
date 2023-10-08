@@ -4,6 +4,7 @@ import { Table, Tooltip } from 'antd';
 import axios from 'axios';
 
 import useFilterSearch from '../../../hooks/useFilterSearch';
+import { host } from '../../../store';
 
 import { BsEyeFill } from 'react-icons/bs';
 
@@ -22,7 +23,7 @@ const ProjectList = ({ data }) => {
     setLoading(true);
 
     axios
-      .get('/api/admin/project/get-active-list')
+      .get(`${host}/api/admin/project/get-active-list`)
       .then((res) => {
         const resList = res.data.data.map((val, i) => {
           return { ...val, key: val._id, index: i + 1 };

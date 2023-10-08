@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 import EmployeeList from '../DetailList/EmployeeList';
+import { host } from '../../../store';
 
 import style from './ProjectDetail.module.css';
 
@@ -15,7 +16,7 @@ const ProjectDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`/api/admin/project/get-detail/${projectId}`)
+      .get(`${host}/api/admin/project/get-detail/${projectId}`)
       .then((res) => setProject(res.data))
       .catch((error) => console.log(error));
   }, [projectId]);

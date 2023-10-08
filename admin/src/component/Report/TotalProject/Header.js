@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 
 import { getProjectData } from '../../../store/project/actions';
+import { host } from '../../../store';
 
 import style from './Header.module.css';
 import { TbChartHistogram } from 'react-icons/tb';
@@ -22,12 +23,12 @@ const Header = () => {
     dispatch(getProjectData());
 
     axios
-      .get('/api/admin/project/get-all-list')
+      .get(`${host}/api/admin/project/get-all-list`)
       .then((res) => setTotalProject(res.data.total))
       .catch((error) => console.log(error));
 
     axios
-      .get('/api/admin/project/get-deleted-list')
+      .get(`${host}/api/admin/project/get-deleted-list`)
       .then((res) => setTotalDeletedProject(res.data.total))
       .catch((error) => console.log(error));
   }, [dispatch]);

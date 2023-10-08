@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import EmployeeList from '../DetailList/EmployeeList';
 import ProjectList from '../DetailList/ProjectList';
+import { host } from '../../../store';
 
 import style from './DepartmentDetail.module.css';
 
@@ -16,7 +17,7 @@ const DepartmentDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`/api/admin/department/get-detail/${departmentId}`)
+      .get(`${host}/api/admin/department/get-detail/${departmentId}`)
       .then((res) => setDepartment(res.data))
       .catch((error) => console.log(error));
   }, [departmentId]);

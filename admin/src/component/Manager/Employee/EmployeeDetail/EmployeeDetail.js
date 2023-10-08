@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import Profile from './Profile';
 import ProjectList from '../../DetailList/ProjectList';
+import { host } from '../../../../store';
 
 import style from './EmployeeDetail.module.css';
 
@@ -17,7 +18,7 @@ const EmployeeDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`/api/admin/employee/get-detail/${employeeId}`)
+      .get(`${host}/api/admin/employee/get-detail/${employeeId}`)
       .then((res) => setEmployee(res.data))
       .catch((error) => console.log(error));
   }, [employeeId]);

@@ -4,6 +4,7 @@ import { Modal, Table } from 'antd';
 import axios from 'axios';
 
 import useFilterSearch from '../../../hooks/useFilterSearch';
+import { host } from '../../../store';
 
 import style from './EmployeeSelect.module.css';
 
@@ -32,7 +33,7 @@ const EmployeeSelect = ({
     setLoading(true);
 
     axios
-      .get('/api/admin/employee/get-active-list')
+      .get(`${host}/api/admin/employee/get-active-list`)
       .then((res) => {
         const resData = res.data.data.map((val, i) => {
           return { ...val, key: val._id };

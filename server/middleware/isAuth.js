@@ -7,21 +7,20 @@ const User = require('../models/User');
 // ==================================================
 
 module.exports = (req, res, next) => {
-  // const token = req.session.token;
-  // const decodedToken = jwt.decode(token, 'supersecrettoken');
+  const token = req.session.token;
+  const decodedToken = jwt.decode(token, 'supersecrettoken');
 
-  // // Kiểm tra xem có token hay không
-  // if (!decodedToken) {
-  //   const error = new Error('Chưa đăng nhập');
+  // Kiểm tra xem có token hay không
+  if (!decodedToken) {
+    const error = new Error('Chưa đăng nhập');
 
-  //   error.statusCode = 401;
+    error.statusCode = 401;
 
-  //   throw error;
-  // }
+    throw error;
+  }
 
   // Lấy dữ liệu user đang login
-  // User.findById(decodedToken.userId)
-  User.findById('650bb48cb0b390108a1e6a73')
+  User.findById(decodedToken.userId)
     .populate('profile')
     .then((user) => {
       if (!user) {
