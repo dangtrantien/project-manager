@@ -169,10 +169,13 @@ const EmployeeList = () => {
               {projects.map((p) => p.name).join(', ')}
             </Tooltip>
           ) : (
-            <p>Hiện chưa tham gia dự án nào</p>
+            <p>Chưa tham gia dự án</p>
           )}
         </>
       ),
+      ellipsis: {
+        showTitle: false,
+      },
       responsive: ['md'],
     },
     {

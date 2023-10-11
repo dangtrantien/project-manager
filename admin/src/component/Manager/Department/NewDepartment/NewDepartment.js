@@ -12,11 +12,11 @@ import {
 } from 'antd';
 import axios from 'axios';
 
-import { getDepartmentData } from '../../../store/department/actions';
-import { getTechStackData } from '../../../store/tech-stack/actions';
-import { getProjectData } from '../../../store/project/actions';
-import EmployeeSelect from '../../UI/Button/EmployeeSelect';
-import { host } from '../../../store';
+import { getDepartmentData } from '../../../../store/department/actions';
+import { getTechStackData } from '../../../../store/tech-stack/actions';
+import { getProjectData } from '../../../../store/project/actions';
+import EmployeeSelectList from './EmployeeSelectList';
+import { host } from '../../../../store';
 
 // ==================================================
 
@@ -261,7 +261,7 @@ const NewDepartment = () => {
               </span>
             </Space>
 
-            <EmployeeSelect
+            <EmployeeSelectList
               open={openModal}
               onClose={() => setOpenModal(false)}
               selected={selectedEmployee}

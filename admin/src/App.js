@@ -28,7 +28,7 @@ const NewClientPage = lazy(() =>
 );
 const DepartmentPage = lazy(() => import('./pages/Manager/Department'));
 const NewDepartmentPage = lazy(() =>
-  import('./component/Manager/Department/NewDepartment')
+  import('./component/Manager/Department/NewDepartment/NewDepartment')
 );
 const DepartmentDetailPage = lazy(() =>
   import('./component/Manager/Department/DepartmentDetail')
@@ -42,7 +42,7 @@ const EmployeeDetailPage = lazy(() =>
 );
 const ProjectPage = lazy(() => import('./pages/Manager/Project'));
 const NewProjectPage = lazy(() =>
-  import('./component/Manager/Project/NewProject')
+  import('./component/Manager/Project/NewProject/NewProject')
 );
 const ProjectDetailPage = lazy(() =>
   import('./component/Manager/Project/ProjectDetail')

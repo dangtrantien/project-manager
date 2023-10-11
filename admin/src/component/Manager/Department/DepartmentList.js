@@ -140,10 +140,13 @@ const DepartmentList = () => {
               {projects.map((p) => p.name).join(', ')}
             </Tooltip>
           ) : (
-            <p>Hiện chưa tham gia dự án nào</p>
+            <p>Chưa tham gia dự án</p>
           )}
         </>
       ),
+      ellipsis: {
+        showTitle: false,
+      },
       responsive: ['xl'],
     },
     {
@@ -163,6 +166,9 @@ const DepartmentList = () => {
           {employees.map((e) => e.fullName).join(', ')}
         </Tooltip>
       ),
+      ellipsis: {
+        showTitle: false,
+      },
       responsive: ['xl'],
     },
     {

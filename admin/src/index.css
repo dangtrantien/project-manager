@@ -259,11 +259,19 @@ main {
   .state-col {
     width: 16%;
   }
+
+  .modal {
+    width: 60% !important;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   .priority-col,
   .state-col {
     width: 12%;
+  }
+
+  .modal {
+    width: 50% !important;
   }
 }

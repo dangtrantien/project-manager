@@ -12,12 +12,12 @@ import {
 } from 'antd';
 import axios from 'axios';
 
-import { getCategoryData } from '../../../store/project-category/actions';
-import { getProjectStateData } from '../../../store/project-state/actions';
-import { getTechStackData } from '../../../store/tech-stack/actions';
-import { getDepartmentData } from '../../../store/department/actions';
-import EmployeeSelect from '../../UI/Button/EmployeeSelect';
-import { host } from '../../../store';
+import { getCategoryData } from '../../../../store/project-category/actions';
+import { getProjectStateData } from '../../../../store/project-state/actions';
+import { getTechStackData } from '../../../../store/tech-stack/actions';
+import { getDepartmentData } from '../../../../store/department/actions';
+import EmployeeSelectList from './EmployeeSelectList';
+import { host } from '../../../../store';
 
 // ==================================================
 
@@ -352,13 +352,12 @@ const NewProject = () => {
               </span>
             </Space>
 
-            <EmployeeSelect
+            <EmployeeSelectList
               open={openModal}
               onClose={() => setOpenModal(false)}
               selected={selectedEmployee}
               onSelect={selectEmployeeHandler}
-              isEdit={state?.isEdit}
-              department={form.getFieldValue(['departments'])}
+              departments={form.getFieldValue('departments')}
             />
           </Form.Item>
 

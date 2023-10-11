@@ -1,27 +1,23 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useSelector } from 'react-redux';
-import { Modal, Table } from 'antd';
+import { Modal, Table, Tooltip } from 'antd';
 import axios from 'axios';
 
-import useFilterSearch from '../../../hooks/useFilterSearch';
-import { host } from '../../../store';
-
-import style from './EmployeeSelect.module.css';
+import useFilterSearch from '../../../../hooks/useFilterSearch';
+import { host } from '../../../../store';
 
 // ==================================================
 
-const EmployeeSelect = ({
+const EmployeeSelectList = ({
   open,
   onClose,
   selected,
   onSelect,
-  department,
-  isEdit,
+  departments,
 }) => {
-  const departments = useSelector((state) => state.department.data);
+  const departmentListData = useSelector((state) => state.department.data);
 
   const [employeeList, setEmployeeList] = useState([]);
-  const [totalData, setTotalData] = useState(0);
   const [loading, setLoading] = useState(false);
   const [selectedRows, setSelectedRows] = useState([]);
   const [pagination, setPagination] = useState({
@@ -43,13 +39,9 @@ const EmployeeSelect = ({
 
         const existed = [];
 
-        let departmentList = [...departments];
-
-        if (department) {
-          departmentList = [...departments].filter(
-            (d) => department.indexOf(d._id) > -1
-          );
-        }
+        const departmentList = departmentListData.filter(
+          (d) => departments?.indexOf(d._id) > -1
+        );
 
         departmentList.map((d) => {
           d.employees.map((e) => {
@@ -63,29 +55,23 @@ const EmployeeSelect = ({
           return d;
         });
 
-        let dataList = resData.filter((val) => existed.indexOf(val._id) === -1);
+        const dataList = resData.filter((val) => existed.indexOf(val._id) > -1);
 
-        if (department) {
-          dataList = resData.filter((val) => existed.indexOf(val._id) > -1);
-        }
+        const existedSelected = selected.filter(
+          (val) => existed.indexOf(val) === -1
+        );
 
-        if (isEdit && !department) {
-          const currentEmployee = resData.filter(
-            (val) => selected.indexOf(val._id) > -1
+        if (existedSelected.length !== 0) {
+          existedSelected.map((val) =>
+            setSelectedRows((prev) => prev.filter((select) => select !== val))
           );
-          const employee = resData.filter(
-            (val) => existed.indexOf(val._id) === -1
-          );
-
-          dataList = [...new Set([currentEmployee, employee].flat())];
         }
 
         setEmployeeList(dataList);
-        setTotalData(dataList.length);
         setLoading(false);
       })
       .catch((error) => console.log(error));
-  }, [departments, department, isEdit, selected]);
+  }, [departmentListData, departments, selected]);
 
   const columns = [
     {
@@ -98,8 +84,22 @@ const EmployeeSelect = ({
       title: 'Teck stack',
       key: 'techStacks',
       render: (_, { techStacks }) => (
-        <>{techStacks.map((ts) => ts.techStack.name).join(', ')}</>
+        <Tooltip
+          placement='topLeft'
+          title={techStacks.map((ts) => (
+            <div key={ts._id}>
+              <span>{ts.techStack.name}</span>
+
+              <br />
+            </div>
+          ))}
+        >
+          {techStacks.map((ts) => ts.techStack.name).join(', ')}
+        </Tooltip>
       ),
+      ellipsis: {
+        showTitle: false,
+      },
     },
   ];
 
@@ -118,9 +118,15 @@ const EmployeeSelect = ({
         top: 20,
       }}
       open={open}
-      onCancel={onClose}
+      onCancel={() => {
+        if (selected.length !== 0) {
+          setSelectedRows(selected);
+        }
+
+        onClose();
+      }}
       onOk={() => onSelect(selectedRows)}
-      className={style.modal}
+      className='modal'
     >
       <Table
         bordered
@@ -129,7 +135,7 @@ const EmployeeSelect = ({
         loading={loading}
         pagination={{
           ...pagination,
-          total: totalData,
+          total: employeeList.length,
           position: ['bottomCenter'],
           size: 'default',
           onChange: (page, pageSize) =>
@@ -144,4 +150,4 @@ const EmployeeSelect = ({
   );
 };
 
-export default EmployeeSelect;
+export default EmployeeSelectList;
