@@ -8,6 +8,21 @@ const Project = require('../models/Project');
 
 // ==================================================
 
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+
 exports.getEmployeeByExperience = async (req, res, next) => {
   try {
     const data = [];
@@ -27,7 +42,7 @@ exports.getEmployeeByExperience = async (req, res, next) => {
 
       data.push({
         type: experienceArr[i],
-        'tổng nhân viên': total,
+        total: total,
       });
     }
 
@@ -67,7 +82,7 @@ exports.getEmployeeByTechStack = async (req, res, next) => {
 
       data.push({
         type: techStacks[i].name,
-        'tổng nhân viên': total,
+        total: total,
       });
     }
 
@@ -100,8 +115,8 @@ exports.getEmployeeByJoinedProject = async (req, res, next) => {
       });
 
       data.push({
-        type: `Tham gia ${i} dự án`,
-        'tổng nhân viên': total,
+        type: i === 0 ? 'Currently free' : `${i} project${i === 1 ? '' : 's'}`,
+        total: total,
       });
     }
 
@@ -127,8 +142,6 @@ exports.getProjectByCategory = async (req, res, next) => {
     const projects = await Project.find({ isDelete: false });
 
     for (let i = 0; i < 12; i++) {
-      const month = `Tháng ${i + 1}`;
-
       for (let j = 0; j < projectCategorys.length; j++) {
         let total = 0;
 
@@ -147,9 +160,9 @@ exports.getProjectByCategory = async (req, res, next) => {
         });
 
         data.push({
-          month: month,
+          month: months[i],
           type: projectCategorys[j].name,
-          'tổng dự án': total,
+          total: total,
         });
       }
     }
@@ -176,8 +189,6 @@ exports.getProjectByProjectState = async (req, res, next) => {
     const projects = await Project.find({ isDelete: false });
 
     for (let i = 0; i < 12; i++) {
-      const month = `Tháng ${i + 1}`;
-
       for (let j = 0; j < projectStates.length; j++) {
         let total = 0;
 
@@ -196,9 +207,9 @@ exports.getProjectByProjectState = async (req, res, next) => {
         });
 
         data.push({
-          month: month,
+          month: months[i],
           type: projectStates[j].name,
-          'tổng dự án': total,
+          total: total,
         });
       }
     }
@@ -225,8 +236,6 @@ exports.getProjectByTechStack = async (req, res, next) => {
     const projects = await Project.find({ isDelete: false });
 
     for (let i = 0; i < 12; i++) {
-      const month = `Tháng ${i + 1}`;
-
       for (let j = 0; j < techStacks.length; j++) {
         let total = 0;
 
@@ -247,9 +256,9 @@ exports.getProjectByTechStack = async (req, res, next) => {
         });
 
         data.push({
-          month: month,
+          month: months[i],
           type: techStacks[j].name,
-          'tổng dự án': total,
+          total: total,
         });
       }
     }
