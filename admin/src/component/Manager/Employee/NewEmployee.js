@@ -40,11 +40,11 @@ const beforeUpload = (file) => {
   const isLt2M = file.size / 1024 / 1024 < 2;
 
   if (!isJpgOrPng) {
-    message.error('Chỉ có thể tải file JPG/PNG. Mời chọn lại!');
+    message.error('Only upload file JPG/PNG. Please select again!');
   }
 
   if (!isLt2M) {
-    message.error('Ảnh phải có kích cỡ nhỏ hơn 2MB!');
+    message.error("Picture's size must be smaller than 2MB!");
   }
 
   return false;
@@ -86,7 +86,7 @@ const NewEmployee = () => {
     if (!value.techStacks || value.techStacks?.length === 0) {
       return notificationApi['warning']({
         placement: 'top',
-        message: 'Tech stack sử dụng không được để trống!',
+        message: 'Please select tech stack!',
       });
     }
 
@@ -168,7 +168,7 @@ const NewEmployee = () => {
 
       {messageContextHolder}
 
-      <h2>Nhân viên mới</h2>
+      <h2>New employee</h2>
 
       <div className={`form-container ${style['form-container']}`}>
         <Form
@@ -200,13 +200,13 @@ const NewEmployee = () => {
         >
           <Form.Item
             name='avatar'
-            label='Ảnh'
+            label='Avatar'
             valuePropName='file'
             getValueFromEvent={(e) => e?.file}
             rules={[
               {
                 required: true,
-                message: 'Mời chọn ảnh đại diện của nhân viên!',
+                message: "Please upload employee's avatar!",
               },
             ]}
           >
@@ -244,37 +244,37 @@ const NewEmployee = () => {
 
           <Form.Item
             name='fullName'
-            label='Họ tên'
+            label='Full name'
             rules={[
               {
                 required: true,
-                message: 'Họ tên của nhân viên không được để trống!',
+                message: "Please enter employee's full name!",
               },
             ]}
           >
-            <Input allowClear placeholder='Mời nhập họ tên của nhân viên' />
+            <Input allowClear />
           </Form.Item>
 
           <Form.Item
             name='idCard'
-            label='Căn cước công dân'
+            label='ID'
             rules={[
               {
                 required: true,
-                message: 'CCCD của nhân viên không được để trống!',
+                message: "Please enter employee's ID number!",
               },
             ]}
           >
-            <Input allowClear placeholder='Mời nhập CCCD của nhân viên' />
+            <Input allowClear />
           </Form.Item>
 
           <Form.Item
             name='dob'
-            label='Ngày sinh'
+            label='Day of birth'
             rules={[
               {
                 required: true,
-                message: 'Ngày sinh của nhân viên không được để trống!',
+                message: "Please enter employee's birthday!",
               },
             ]}
           >
@@ -283,54 +283,48 @@ const NewEmployee = () => {
 
           <Form.Item
             name='gender'
-            label='Giới tính'
+            label='Gender'
             rules={[
               {
                 required: true,
-                message: 'Giới tính của nhân viên không được để trống!',
+                message: "Please select employee's gender!",
               },
             ]}
           >
             <Select
-              placeholder='Mời lựa chọn giới tính'
               style={{
                 width: '25rem',
               }}
             >
-              <Option value='male'>Nam</Option>
-              <Option value='female'>Nữ</Option>
+              <Option value='male'>Male</Option>
+              <Option value='female'>Female</Option>
             </Select>
           </Form.Item>
 
           <Form.Item
             name='phone'
-            label='Số điện thoại'
+            label='Phone number'
             rules={[
               {
                 required: true,
-                message: 'Số điện thoại của nhân viên không được để trống!',
+                message: "Please enter employee's phone number!",
               },
             ]}
           >
-            <Input
-              allowClear
-              placeholder='Mời nhập số điện thoại của nhân viên'
-            />
+            <Input allowClear />
           </Form.Item>
 
           <Form.Item
             name='experience'
-            label='Kinh nghiệm'
+            label='Experience'
             rules={[
               {
                 required: true,
-                message:
-                  'Mức độ kinh nghiệm của nhân viên không được để trống!',
+                message: "Please select employee's experience",
               },
             ]}
           >
             <Select
-              placeholder='Mời lựa chọn kinh nghiệm'
               style={{
                 width: '25rem',
               }}
@@ -342,19 +336,15 @@ const NewEmployee = () => {
             </Select>
           </Form.Item>
 
-          <Form.Item name='certificate' label='Chứng chỉ'>
+          <Form.Item name='certificate' label='Certificate'>
             <Input.TextArea
               rows={4}
               allowClear
-              placeholder='Xuống dòng với mỗi chứng chỉ'
+              placeholder='Line break for each certificate'
             />
           </Form.Item>
 
-          <Form.Item
-            name='employeeTechStack'
-            label='Tech stack sử dụng'
-            required
-          >
+          <Form.Item name='employeeTechStack' label='Tech stack' required>
             <Form.List name='techStacks'>
               {(fields, { add, remove }) => (
                 <>
@@ -384,13 +374,12 @@ const NewEmployee = () => {
                           rules={[
                             {
                               required: true,
-                              message: 'Tên tech stack không được để trống!',
+                              message: 'Please select tech stack!',
                             },
                           ]}
                         >
                           <Select
                             allowClear
-                            placeholder='Mời lựa chọn tech stack'
                             filterOption={(inputValue, option) => {
                               if (
                                 option.name
@@ -419,7 +408,7 @@ const NewEmployee = () => {
 
                       <div className={style['card-form-controll-container']}>
                         <p className={style['card-form-label']}>
-                          Thời gian làm với tech stack :
+                          Time working with tech stack :
                         </p>
 
                         <Form.Item
@@ -429,21 +418,17 @@ const NewEmployee = () => {
                           rules={[
                             {
                               required: true,
-                              message:
-                                'Thời gian làm với tech stack không được để trống!',
+                              message: 'Please enter working time!',
                             },
                           ]}
                         >
-                          <Input
-                            allowClear
-                            placeholder='Mời nhập thời gian làm với tech stack'
-                          />
+                          <Input allowClear />
                         </Form.Item>
                       </div>
 
                       <div className={style['card-form-controll-container']}>
                         <p className={style['card-form-label']}>
-                          Framework sử dụng :
+                          Framework used :
                         </p>
 
                         <Form.Item
@@ -453,14 +438,11 @@ const NewEmployee = () => {
                           rules={[
                             {
                               required: true,
-                              message: 'Framework không được để trống!',
+                              message: 'Please enter framework!',
                             },
                           ]}
                         >
-                          <Input
-                            allowClear
-                            placeholder='Mời nhập framework sử dụng'
-                          />
+                          <Input allowClear />
                         </Form.Item>
                       </div>
                     </Card>
@@ -472,7 +454,7 @@ const NewEmployee = () => {
                       onClick={() => add()}
                       icon={<PlusOutlined />}
                     >
-                      Thêm dữ liệu
+                      Add tech stack
                     </Button>
                   </Form.Item>
                 </>
@@ -495,11 +477,11 @@ const NewEmployee = () => {
           >
             <div className='button-container'>
               <Button type='primary' htmlType='submit'>
-                Lưu
+                Save
               </Button>
 
               <Button onClick={() => navigate('/employee', { replace: true })}>
-                Hủy
+                Cancel
               </Button>
             </div>
           </Form.Item>

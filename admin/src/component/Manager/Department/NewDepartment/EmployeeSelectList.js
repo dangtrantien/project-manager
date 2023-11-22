@@ -68,10 +68,10 @@ const EmployeeSelectList = ({ open, onClose, selected, onSelect, isEdit }) => {
 
   const columns = [
     {
-      title: 'Họ tên',
+      title: 'Employee',
       key: 'fullName',
       dataIndex: 'fullName',
-      ...useFilterSearch('fullName', 'Tìm kiếm theo họ tên'),
+      ...useFilterSearch('fullName', 'Search employee'),
     },
     {
       title: 'Teck stack',
@@ -106,7 +106,7 @@ const EmployeeSelectList = ({ open, onClose, selected, onSelect, isEdit }) => {
 
   return (
     <Modal
-      title='Nhân viên'
+      title='Employee'
       style={{
         top: 20,
       }}

@@ -29,13 +29,13 @@ const ProjectDetail = () => {
 
       <div className={style['content-container']}>
         <div className={style['control-container']}>
-          <p className={style.label}>Thể loại :</p>
+          <p className={style.label}>Category :</p>
 
           <span className={style.content}>{project.category?.name}</span>
         </div>
 
         <div className={style['control-container']}>
-          <p className={style.label}>Trạng thái :</p>
+          <p className={style.label}>State :</p>
 
           <span className={style.content}>{project.projectState?.name}</span>
         </div>

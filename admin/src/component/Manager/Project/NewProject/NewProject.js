@@ -44,7 +44,7 @@ const NewProject = () => {
   const openModalHandler = () => {
     if (!form.getFieldValue(['departments'])) {
       notificationApi['warning']({
-        message: 'Mời lựa chọn trung tâm phụ trách trước!',
+        message: 'Please select department before select employee!',
         placement: 'top',
       });
     } else {
@@ -69,7 +69,7 @@ const NewProject = () => {
     if (selectedEmployee.length === 0) {
       return notificationApi['warning']({
         placement: 'top',
-        message: 'Nhân viên không được để trống!',
+        message: 'Please select employee!',
       });
     }
 
@@ -143,7 +143,7 @@ const NewProject = () => {
 
       {messageContextHolder}
 
-      <h2>Dự án mới</h2>
+      <h2>New project</h2>
 
       <div className='form-container' style={{ paddingTop: '4rem' }}>
         <Form
@@ -175,30 +175,29 @@ const NewProject = () => {
         >
           <Form.Item
             name='name'
-            label='Tên dự án'
+            label="Project's name"
             rules={[
               {
                 required: true,
-                message: 'Tên của dự án không được để trống!',
+                message: "Please enter project's name",
               },
             ]}
           >
-            <Input allowClear placeholder='Mời nhập tên của dự án' />
+            <Input allowClear />
           </Form.Item>
 
           <Form.Item
             name='category'
-            label='Thể loại'
+            label='Category'
             rules={[
               {
                 required: true,
-                message: 'Thể loại dự án không được để trống!',
+                message: "Please select project's category",
               },
             ]}
           >
             <Select
               allowClear
-              placeholder='Mời lựa chọn thể loại'
               filterOption={(inputValue, option) => {
                 if (
                   option.name
@@ -226,17 +225,16 @@ const NewProject = () => {
 
           <Form.Item
             name='projectState'
-            label='Trạng thái dự án'
+            label="Project's state"
             rules={[
               {
                 required: true,
-                message: 'Trạng thái dự án không được để trống!',
+                message: "Please select project's state",
               },
             ]}
           >
             <Select
               allowClear
-              placeholder='Mời lựa chọn trạng thái'
               filterOption={(inputValue, option) => {
                 if (
                   option.name
@@ -264,18 +262,17 @@ const NewProject = () => {
 
           <Form.Item
             name='techStacks'
-            label='Tech stack sử dụng'
+            label='Tech stack'
             rules={[
               {
                 required: true,
-                message: 'Tech stack sử dụng không được để trống!',
+                message: 'Please select tech stack!',
               },
             ]}
           >
             <Select
               mode='multiple'
               allowClear
-              placeholder='Mời lựa chọn tech stack'
               maxTagCount='responsive'
               filterOption={(inputValue, option) => {
                 if (
@@ -305,18 +302,17 @@ const NewProject = () => {
 
           <Form.Item
             name='departments'
-            label='Trung tâm phụ trách'
+            label='Department in charge'
             rules={[
               {
                 required: true,
-                message: 'Trung tâm phụ trách dự án không được để trống!',
+                message: 'Please select department!',
               },
             ]}
           >
             <Select
               mode='multiple'
               allowClear
-              placeholder='Mời lựa chọn trung tâm phụ trách'
               maxTagCount='responsive'
               filterOption={(inputValue, option) => {
                 if (
@@ -341,13 +337,15 @@ const NewProject = () => {
             />
           </Form.Item>
 
-          <Form.Item label='Nhân viên' required>
+          <Form.Item label='Employee' required>
             <Space direction='vertical'>
-              <Button onClick={openModalHandler}>Lựa chọn nhân viên</Button>
+              <Button onClick={openModalHandler}>Select employee</Button>
 
               <span style={{ color: '#adb5bd' }}>
                 {selectedEmployee.length > 0
-                  ? `Đã lựa chọn ${selectedEmployee.length} nhân viên`
+                  ? `Selected ${selectedEmployee.length} employee${
+                      selectedEmployee.length === 1 ? '' : 's'
+                    }`
                   : ''}
               </span>
             </Space>
@@ -376,11 +374,11 @@ const NewProject = () => {
           >
             <div className='button-container'>
               <Button type='primary' htmlType='submit'>
-                Lưu
+                Save
               </Button>
 
               <Button onClick={() => navigate('/project', { replace: true })}>
-                Hủy
+                Cancel
               </Button>
             </div>
           </Form.Item>

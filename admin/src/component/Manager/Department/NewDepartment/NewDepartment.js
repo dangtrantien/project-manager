@@ -53,7 +53,7 @@ const NewDepartment = () => {
     if (selectedEmployee.length === 0) {
       return notificationApi['warning']({
         placement: 'top',
-        message: 'Nhân viên không được để trống!',
+        message: 'Please select employee!',
       });
     }
 
@@ -121,7 +121,7 @@ const NewDepartment = () => {
 
       {messageContextHolder}
 
-      <h2>Phòng ban mới</h2>
+      <h2>New department</h2>
 
       <div className='form-container' style={{ paddingTop: '4rem' }}>
         <Form
@@ -153,44 +153,43 @@ const NewDepartment = () => {
         >
           <Form.Item
             name='name'
-            label='Tên phòng ban'
+            label="Department's name"
             rules={[
               {
                 required: true,
-                message: 'Tên của phòng ban không được để trống!',
+                message: "Please enter department's name!",
               },
             ]}
           >
-            <Input allowClear placeholder='Mời nhập tên của phòng ban' />
+            <Input allowClear />
           </Form.Item>
 
           <Form.Item
             name='mission'
-            label='Nhiệm vụ'
+            label='Mission'
             rules={[
               {
                 required: true,
-                message: 'nhiệm vụ của phòng ban không được để trống!',
+                message: "Please enter department's mission!",
               },
             ]}
           >
-            <Input allowClear placeholder='Mời nhập nhiệm vụ của phòng ban' />
+            <Input allowClear />
           </Form.Item>
 
           <Form.Item
             name='techStacks'
-            label='Tech stack sử dụng'
+            label='Tech stack'
             rules={[
               {
                 required: true,
-                message: 'Tech stack sử dụng không được để trống!',
+                message: "Please select department's tech stack",
               },
             ]}
           >
             <Select
               mode='multiple'
               allowClear
-              placeholder='Mời lựa chọn tech stack'
               maxTagCount='responsive'
               filterOption={(inputValue, option) => {
                 if (
@@ -218,11 +217,10 @@ const NewDepartment = () => {
             />
           </Form.Item>
 
-          <Form.Item name='projects' label='Dự án phụ trách'>
+          <Form.Item name='projects' label='Project in charge'>
             <Select
               mode='multiple'
               allowClear
-              placeholder='Mời lựa chọn dự án'
               maxTagCount='responsive'
               filterOption={(inputValue, option) => {
                 if (
@@ -248,15 +246,17 @@ const NewDepartment = () => {
             />
           </Form.Item>
 
-          <Form.Item label='Nhân viên' required>
+          <Form.Item label='Employee' required>
             <Space direction='vertical'>
               <Button onClick={() => setOpenModal(true)}>
-                Lựa chọn nhân viên
+                Select employee
               </Button>
 
               <span style={{ color: '#adb5bd' }}>
                 {selectedEmployee.length > 0
-                  ? `Đã lựa chọn ${selectedEmployee.length} nhân viên`
+                  ? `Selected ${selectedEmployee.length} employee${
+                      selectedEmployee.length === 1 ? '' : 's'
+                    }`
                   : ''}
               </span>
             </Space>
@@ -285,13 +285,13 @@ const NewDepartment = () => {
           >
             <div className='button-container'>
               <Button type='primary' htmlType='submit'>
-                Lưu
+                Save
               </Button>
 
               <Button
                 onClick={() => navigate('/department', { replace: true })}
               >
-                Hủy
+                Cancel
               </Button>
             </div>
           </Form.Item>

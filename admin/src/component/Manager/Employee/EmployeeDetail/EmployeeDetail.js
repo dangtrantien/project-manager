@@ -52,12 +52,12 @@ const EmployeeDetail = () => {
         centered
         items={[
           {
-            label: 'Thông tin cá nhân',
+            label: 'Profile',
             key: 1,
             children: <Profile data={employee} />,
           },
           {
-            label: 'Dự án tham gia',
+            label: 'Participating projects',
             key: 2,
             children: <ProjectList data={employee.projects} />,
           },

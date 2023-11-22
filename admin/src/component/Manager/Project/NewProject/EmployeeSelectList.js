@@ -75,10 +75,10 @@ const EmployeeSelectList = ({
 
   const columns = [
     {
-      title: 'Họ tên',
+      title: 'Employee',
       key: 'fullName',
       dataIndex: 'fullName',
-      ...useFilterSearch('fullName', 'Tìm kiếm theo họ tên'),
+      ...useFilterSearch('fullName', 'Search employee'),
     },
     {
       title: 'Teck stack',
@@ -113,7 +113,7 @@ const EmployeeSelectList = ({
 
   return (
     <Modal
-      title='Nhân viên'
+      title='Employee'
       style={{
         top: 20,
       }}

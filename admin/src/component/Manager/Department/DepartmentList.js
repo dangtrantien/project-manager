@@ -56,8 +56,10 @@ const DepartmentList = () => {
   // Xóa data
   const deleteHandler = (id, multiple) => {
     confirm({
-      title: 'Bạn có chắc chắn muốn xóa dữ liệu?',
+      title: 'Are you sure delete this task?',
+      okText: 'Yes',
       okType: 'danger',
+      cancelText: 'No',
       onOk() {
         let url = `${host}/api/admin/department/delete-one/${id}`;
         let data = null;
@@ -104,25 +106,25 @@ const DepartmentList = () => {
 
   const columns = [
     {
-      title: 'STT',
+      title: '#',
       dataIndex: 'index',
       className: 'index-col',
     },
     {
-      title: 'Tên',
+      title: 'Name',
       key: 'name',
       dataIndex: 'name',
-      ...useFilterSearch('name', 'Tìm kiếm theo tên'),
+      ...useFilterSearch('name', 'Search name'),
     },
     {
-      title: 'Chức năng, nhiệm vụ',
+      title: 'Mission',
       key: 'mission',
       dataIndex: 'mission',
-      ...useFilterSearch('mission', 'Tìm kiếm theo nhiệm vụ'),
+      ...useFilterSearch('mission', 'Search mission'),
       responsive: ['sm'],
     },
     {
-      title: 'Các dự án',
+      title: 'Project in charge',
       key: 'projects',
       render: (_, { projects }) => (
         <>
@@ -140,7 +142,7 @@ const DepartmentList = () => {
               {projects.map((p) => p.name).join(', ')}
             </Tooltip>
           ) : (
-            <p>Chưa tham gia dự án</p>
+            <p>Currently free</p>
           )}
         </>
       ),
@@ -150,7 +152,7 @@ const DepartmentList = () => {
       responsive: ['xl'],
     },
     {
-      title: 'Nhân viên',
+      title: 'Employee',
       key: 'projects',
       render: (_, { employees }) => (
         <Tooltip
@@ -172,7 +174,7 @@ const DepartmentList = () => {
       responsive: ['xl'],
     },
     {
-      title: '',
+      title: 'Action',
       key: 'action',
       render: (_, record) => (
         <Space style={{ width: '100%', justifyContent: 'space-evenly' }}>
@@ -218,19 +220,19 @@ const DepartmentList = () => {
             onClick={deleteHandler.bind(null, selectedRows, 'multiple')}
             disabled={selectedRows.length === 0}
           >
-            Xóa dữ liệu
+            Delete selected
           </Button>
 
           <Button
             onClick={() => setSelectedRows([])}
             disabled={selectedRows.length === 0}
           >
-            Bỏ chọn
+            Deselect All
           </Button>
 
           <span style={{ color: '#adb5bd' }}>
             {selectedRows.length > 0
-              ? `Đã lựa chọn ${selectedRows.length} dòng`
+              ? `Selected ${selectedRows.length} items`
               : ''}
           </span>
         </Space>

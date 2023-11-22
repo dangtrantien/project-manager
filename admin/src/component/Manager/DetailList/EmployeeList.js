@@ -42,28 +42,28 @@ const EmployeeList = ({ data }) => {
 
   const columns = [
     {
-      title: 'STT',
+      title: '#',
       dataIndex: 'index',
       className: 'index-col',
     },
     {
-      title: 'Họ tên nhân viên',
+      title: 'Employee',
       key: 'fullName',
       dataIndex: 'fullName',
-      ...useFilterSearch('fullName', 'Tìm kiếm theo họ tên'),
+      ...useFilterSearch('fullName', 'Search employee'),
     },
     {
-      title: 'Ngày sinh',
+      title: 'Day of birth',
       key: 'dob',
       dataIndex: 'dob',
-      ...useFilterSearch('dob', 'Tìm kiếm theo ngày sinh'),
+      ...useFilterSearch('dob', 'Search birthday'),
       responsive: ['xl'],
     },
     {
-      title: 'Số điện thoại',
+      title: 'Phone number',
       key: 'phone',
       dataIndex: 'phone',
-      ...useFilterSearch('phone', 'Tìm kiếm theo số điện thoại'),
+      ...useFilterSearch('phone', 'Search phone'),
       responsive: ['xl'],
     },
     {
@@ -89,7 +89,7 @@ const EmployeeList = ({ data }) => {
       responsive: ['xl'],
     },
     {
-      title: 'Các dự án tham gia',
+      title: 'Project in charge',
       key: 'projects',
       render: (_, { projects }) => (
         <>
@@ -107,14 +107,14 @@ const EmployeeList = ({ data }) => {
               {projects.map((p) => p.name).join(', ')}
             </Tooltip>
           ) : (
-            <p>Hiện chưa tham gia dự án nào</p>
+            <p>Currently free</p>
           )}
         </>
       ),
       responsive: ['md'],
     },
     {
-      title: '',
+      title: 'Action',
       key: 'action',
       render: (_, record) => (
         <Link

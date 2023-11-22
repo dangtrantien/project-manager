@@ -56,8 +56,10 @@ const EmployeeList = () => {
   // Xóa data
   const deleteHandler = (id, multiple) => {
     confirm({
-      title: 'Bạn có chắc chắn muốn xóa dữ liệu?',
+      title: 'Are you sure delete this task?',
+      okText: 'Yes',
       okType: 'danger',
+      cancelText: 'No',
       onOk() {
         let url = `${host}/api/admin/employee/delete-one/${id}`;
         let data = null;
@@ -104,28 +106,28 @@ const EmployeeList = () => {
 
   const columns = [
     {
-      title: 'STT',
+      title: '#',
       dataIndex: 'index',
       className: 'index-col',
     },
     {
-      title: 'Họ tên',
+      title: 'Employee',
       key: 'fullName',
       dataIndex: 'fullName',
-      ...useFilterSearch('fullName', 'Tìm kiếm theo họ tên'),
+      ...useFilterSearch('fullName', 'Search employee'),
     },
     {
-      title: 'Ngày sinh',
+      title: 'Day of birth',
       key: 'dob',
       dataIndex: 'dob',
-      ...useFilterSearch('dob', 'Tìm kiếm theo ngày sinh'),
+      ...useFilterSearch('dob', 'Search birthday'),
       responsive: ['xl'],
     },
     {
-      title: 'Số điện thoại',
+      title: 'Phone number',
       key: 'phone',
       dataIndex: 'phone',
-      ...useFilterSearch('phone', 'Tìm kiếm theo số điện thoại'),
+      ...useFilterSearch('phone', 'Search phone'),
       responsive: ['xl'],
     },
     {
@@ -151,7 +153,7 @@ const EmployeeList = () => {
       responsive: ['xl'],
     },
     {
-      title: 'Các dự án tham gia',
+      title: 'Project in charge',
       key: 'projects',
       render: (_, { projects }) => (
         <>
@@ -169,7 +171,7 @@ const EmployeeList = () => {
               {projects.map((p) => p.name).join(', ')}
             </Tooltip>
           ) : (
-            <p>Chưa tham gia dự án</p>
+            <p>Currently free</p>
           )}
         </>
       ),
@@ -179,7 +181,7 @@ const EmployeeList = () => {
       responsive: ['md'],
     },
     {
-      title: '',
+      title: 'Action',
       key: 'action',
       render: (_, record) => (
         <Space style={{ width: '100%', justifyContent: 'space-evenly' }}>
@@ -225,19 +227,19 @@ const EmployeeList = () => {
             onClick={deleteHandler.bind(null, selectedRows, 'multiple')}
             disabled={selectedRows.length === 0}
           >
-            Xóa dữ liệu
+            Delete selected
           </Button>
 
           <Button
             onClick={() => setSelectedRows([])}
             disabled={selectedRows.length === 0}
           >
-            Bỏ chọn
+            Deselect All
           </Button>
 
           <span style={{ color: '#adb5bd' }}>
             {selectedRows.length > 0
-              ? `Đã lựa chọn ${selectedRows.length} dòng`
+              ? `Selected ${selectedRows.length} items`
               : ''}
           </span>
         </Space>

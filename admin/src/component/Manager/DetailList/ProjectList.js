@@ -42,18 +42,18 @@ const ProjectList = ({ data }) => {
 
   const columns = [
     {
-      title: 'STT',
+      title: '#',
       dataIndex: 'index',
       className: 'index-col',
     },
     {
-      title: 'Tên dự án',
+      title: 'Name',
       key: 'name',
       dataIndex: 'name',
-      ...useFilterSearch('name', 'Tìm kiếm theo tên'),
+      ...useFilterSearch('name', 'Search name'),
     },
     {
-      title: 'Loại dự án',
+      title: 'Category',
       key: 'category',
       render: (_, { category }) => category.name,
       responsive: ['xl'],
@@ -78,7 +78,7 @@ const ProjectList = ({ data }) => {
       responsive: ['xl'],
     },
     {
-      title: 'Trung tâm phụ trách',
+      title: 'Department responsible',
       key: 'departments',
       render: (_, { departments }) => (
         <Tooltip
@@ -97,7 +97,7 @@ const ProjectList = ({ data }) => {
       responsive: ['xl'],
     },
     {
-      title: 'Thành viên trong dự án',
+      title: 'Employee',
       key: 'employee',
       render: (_, { employees }) => (
         <Tooltip
@@ -116,7 +116,7 @@ const ProjectList = ({ data }) => {
       responsive: ['xl'],
     },
     {
-      title: '',
+      title: 'Action',
       key: 'action',
       render: (_, record) => (
         <Link

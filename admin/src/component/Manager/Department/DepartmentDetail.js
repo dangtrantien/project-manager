@@ -30,7 +30,7 @@ const DepartmentDetail = () => {
 
       <div className={style['content-container']}>
         <div className={style['control-container']}>
-          <p className={style.label}>Nhiệm vụ :</p>
+          <p className={style.label}>Mission :</p>
 
           <span className={style.content}>{department.mission}</span>
         </div>
