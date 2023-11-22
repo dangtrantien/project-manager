@@ -40,7 +40,7 @@ const Header = () => {
   return (
     <div className={style.container}>
       <div className={style['card-container']}>
-        <p className={style.content}>Tổng dự án</p>
+        <p className={style.content}>Total project</p>
 
         <div className={style['total-container']}>
           <p className={style.number}>{totalProject}</p>
@@ -54,7 +54,7 @@ const Header = () => {
       </div>
 
       <div className={style['card-container']}>
-        <p className={style.content}>Dự án đang tiến hành</p>
+        <p className={style.content}>Ongoing project</p>
 
         <div className={style['total-container']}>
           <p className={style.number}>
@@ -73,7 +73,7 @@ const Header = () => {
       </div>
 
       <div className={style['card-container']}>
-        <p className={style.content}>Dự án đã hoàn thành</p>
+        <p className={style.content}>Completed project</p>
 
         <div className={style['total-container']}>
           <p className={style.number}>
@@ -92,7 +92,7 @@ const Header = () => {
       </div>
 
       <div className={style['card-container']}>
-        <p className={style.content}>Dự án đã hủy</p>
+        <p className={style.content}>Canceled project</p>
 
         <div className={style['total-container']}>
           <p className={style.number}>{totalDeletedProject}</p>

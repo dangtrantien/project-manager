@@ -10,7 +10,7 @@ const Header = ({ title, linkTo }) => {
       <h2>{title}</h2>
 
       <Link className='button' to={linkTo}>
-        <BiPlus /> Tạo mới
+        <BiPlus /> Create new
       </Link>
     </div>
   );

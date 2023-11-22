@@ -8,11 +8,11 @@ const ErrorPage = () => {
     <Result
       status='404'
       title='404'
-      subTitle='Trang bạn tìm kiếm không tồn tại.'
+      subTitle='Sorry, the page you visited does not exist.'
       extra={
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <Link className='button' to='/dashboard'>
-            Trở về trang chủ
+            Back home
           </Link>
         </div>
       }

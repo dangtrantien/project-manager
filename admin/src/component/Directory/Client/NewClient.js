@@ -87,7 +87,7 @@ const NewClient = () => {
 
       {messageContextHolder}
 
-      <h2>Khách hàng mới</h2>
+      <h2>New client</h2>
 
       <div className='form-container'>
         <Form
@@ -98,55 +98,51 @@ const NewClient = () => {
         >
           <Form.Item
             name='name'
-            label='Tên khách hàng'
+            label="Client's name"
             rules={[
               {
                 required: true,
-                message: 'Tên khách hàng không được để trống!',
+                message: "Please enter client's name!",
               },
             ]}
           >
-            <Input allowClear placeholder='Mời nhập tên khách hàng' />
+            <Input allowClear />
           </Form.Item>
 
           <Form.Item
             name='short_desc'
-            label='Mô tả ngắn gọn'
+            label='Short description'
             rules={[
               {
                 required: true,
-                message: 'Mô tả ngắn gọn không được để trống!',
+                message: 'Please describe shortly about the client!',
               },
             ]}
           >
-            <Input allowClear placeholder='Mô tả ngắn gọn về khách hàng' />
+            <Input allowClear />
           </Form.Item>
 
           <Form.Item
             name='long_desc'
-            label='Mô tả chi tiết'
+            label='Detail description'
             rules={[
               {
                 required: true,
-                message: 'Mô tả chi tiết không được để trống!',
+                message: 'Please describe in detail about the client!',
               },
             ]}
           >
-            <Input.TextArea
-              rows={4}
-              allowClear
-              placeholder='Mô tả chi tiết về khách hàng'
-            />
+            <Input.TextArea rows={4} allowClear />
           </Form.Item>
 
           <div className={style['flex-container']}>
             <Form.Item
               name='priority'
-              label='Mức độ ưu tiên'
+              label='Priority'
               rules={[
                 {
                   required: true,
-                  message: 'Trong khoảng từ 1-5',
+                  message: 'From 1 to 5',
                 },
               ]}
             >
@@ -155,16 +151,16 @@ const NewClient = () => {
 
             <Form.Item
               name='state'
-              label='Trạng thái'
+              label='State'
               rules={[
                 {
                   required: true,
-                  message: 'Trạng thái không được để trống!',
+                  message: 'Please select state!',
                 },
               ]}
               className={style['state-container']}
             >
-              <Select placeholder='Mời lựa chọn trạng thái'>
+              <Select>
                 <Option value='active'>Active</Option>
                 <Option value='inactive'>Inactive</Option>
               </Select>
@@ -174,11 +170,11 @@ const NewClient = () => {
           <Form.Item>
             <div className='button-container'>
               <Button type='primary' htmlType='submit'>
-                Lưu
+                Save
               </Button>
 
               <Button onClick={() => navigate('/client', { replace: true })}>
-                Hủy
+                Cancel
               </Button>
             </div>
           </Form.Item>

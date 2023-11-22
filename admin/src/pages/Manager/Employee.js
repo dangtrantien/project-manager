@@ -6,7 +6,7 @@ import EmployeeList from '../../component/Manager/Employee/EmployeeList';
 const EmployeePage = () => {
   return (
     <>
-      <Header title='Nhân sự' linkTo='/new-employee' />
+      <Header title='Employee' linkTo='/new-employee' />
 
       <EmployeeList />
     </>

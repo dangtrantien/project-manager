@@ -12,6 +12,10 @@
   gap: 2rem;
 }
 
+.container h1 {
+  margin-bottom: 2rem;
+}
+
 .form-container {
   width: 35rem;
   display: flex;

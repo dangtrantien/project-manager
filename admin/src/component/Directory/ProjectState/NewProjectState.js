@@ -79,7 +79,7 @@ const NewProjectState = () => {
 
       {messageContextHolder}
 
-      <h2>Trạng thái dự án mới</h2>
+      <h2>New project state</h2>
 
       <div className='form-container'>
         <Form
@@ -90,62 +90,55 @@ const NewProjectState = () => {
         >
           <Form.Item
             name='name'
-            label='Trạng thái dự án'
+            label='Project state'
             rules={[
               {
                 required: true,
-                message: 'Tên trạng thái không được để trống!',
+                message: 'Please enter project state!',
               },
             ]}
           >
-            <Input allowClear placeholder='Mời nhập tên trạng thái' />
+            <Input allowClear />
           </Form.Item>
 
           <Form.Item
             name='short_desc'
-            label='Mô tả ngắn gọn'
+            label='Short description'
             rules={[
               {
                 required: true,
-                message: 'Mô tả ngắn gọn không được để trống!',
+                message: 'Please describe shortly about the project state!',
               },
             ]}
           >
-            <Input
-              allowClear
-              placeholder='Mô tả ngắn gọn về trạng thái dự án'
-            />
+            <Input allowClear />
           </Form.Item>
 
           <Form.Item
             name='long_desc'
-            label='Mô tả chi tiết'
+            label='Detail description'
             rules={[
               {
                 required: true,
-                message: 'Mô tả chi tiết không được để trống!',
+                message: 'Please describe in detail about the project state!',
               },
             ]}
           >
-            <Input.TextArea
-              rows={4}
-              allowClear
-              placeholder='Mô tả chi tiết về trạng thái dự án'
-            />
+            <Input.TextArea rows={4} allowClear />
           </Form.Item>
 
           <Form.Item
             name='state'
-            label='Trạng thái'
+            label='State'
             rules={[
               {
                 required: true,
-                message: 'Trạng thái không được để trống!',
+                message: 'Please select state!',
               },
             ]}
             className={style['state-container']}
           >
-            <Select placeholder='Mời lựa chọn trạng thái'>
+            <Select>
               <Option value='active'>Active</Option>
               <Option value='inactive'>Inactive</Option>
             </Select>
@@ -154,13 +147,13 @@ const NewProjectState = () => {
           <Form.Item>
             <div className='button-container'>
               <Button type='primary' htmlType='submit'>
-                Lưu
+                Save
               </Button>
 
               <Button
                 onClick={() => navigate('/project-state', { replace: true })}
               >
-                Hủy
+                Cancel
               </Button>
             </div>
           </Form.Item>

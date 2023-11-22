@@ -9,7 +9,7 @@ const AuthWrapper = ({ children }) => {
 
   return (
     <div className={style.container}>
-      <h1>{pathName === 'login' ? 'Đăng nhập' : 'Đăng ký'}</h1>
+      <h1>{pathName === 'login' ? 'Sign In' : 'Create New Account'}</h1>
 
       {children}
     </div>

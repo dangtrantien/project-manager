@@ -58,7 +58,7 @@ const Sidebar = () => {
 
       <div className={style.nav}>
         <div>
-          <p>Danh mục</p>
+          <p>List</p>
 
           <ul>
             <li>
@@ -67,7 +67,7 @@ const Sidebar = () => {
                 className={({ isActive }) => (isActive ? style.active : null)}
                 onClick={closeNavHandler}
               >
-                <GoProjectRoadmap /> Loại dự án
+                <GoProjectRoadmap /> Project category
               </NavLink>
             </li>
             <li>
@@ -76,7 +76,7 @@ const Sidebar = () => {
                 className={({ isActive }) => (isActive ? style.active : null)}
                 onClick={closeNavHandler}
               >
-                <BsListCheck /> Trạng thái dự án
+                <BsListCheck /> Project state
               </NavLink>
             </li>
             <li>
@@ -94,14 +94,14 @@ const Sidebar = () => {
                 className={({ isActive }) => (isActive ? style.active : null)}
                 onClick={closeNavHandler}
               >
-                <FiUsers /> Nhóm khách hàng
+                <FiUsers /> Client
               </NavLink>
             </li>
           </ul>
         </div>
 
         <div>
-          <p>Quản lý</p>
+          <p>Manage</p>
 
           <ul>
             <li>
@@ -110,7 +110,7 @@ const Sidebar = () => {
                 className={({ isActive }) => (isActive ? style.active : null)}
                 onClick={closeNavHandler}
               >
-                <RiHomeOfficeLine /> Trung tâm, bộ phận, phòng ban
+                <RiHomeOfficeLine /> Department
               </NavLink>
             </li>
             <li>
@@ -119,7 +119,7 @@ const Sidebar = () => {
                 className={({ isActive }) => (isActive ? style.active : null)}
                 onClick={closeNavHandler}
               >
-                <FiUser /> Nhân sự
+                <FiUser /> Employee
               </NavLink>
             </li>
             <li>
@@ -128,14 +128,14 @@ const Sidebar = () => {
                 className={({ isActive }) => (isActive ? style.active : null)}
                 onClick={closeNavHandler}
               >
-                <AiOutlineProject /> Dự án
+                <AiOutlineProject /> Project
               </NavLink>
             </li>
           </ul>
         </div>
 
         <div>
-          <p>Báo cáo</p>
+          <p>Report</p>
 
           <ul>
             <li>
@@ -144,7 +144,7 @@ const Sidebar = () => {
                 className={({ isActive }) => (isActive ? style.active : null)}
                 onClick={closeNavHandler}
               >
-                <TfiFiles /> Số lượng dự án
+                <TfiFiles /> Project quantity
               </NavLink>
             </li>
             <li>
@@ -153,7 +153,7 @@ const Sidebar = () => {
                 className={({ isActive }) => (isActive ? style.active : null)}
                 onClick={closeNavHandler}
               >
-                <FiUsers /> Số lượng nhân sự
+                <FiUsers /> Employee quantity
               </NavLink>
             </li>
           </ul>
@@ -164,7 +164,7 @@ const Sidebar = () => {
           className={`button ${style['logout-button']}`}
           onClick={logoutHandler}
         >
-          <BiLogOut /> Thoát
+          <BiLogOut /> Logout
         </button>
       </div>
     </div>

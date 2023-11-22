@@ -6,7 +6,7 @@ import ClientList from '../../component/Directory/Client/ClientList';
 const ClientPage = () => {
   return (
     <>
-      <Header title='Nhóm khách hàng' linkTo='/new-client' />
+      <Header title='Client' linkTo='/new-client' />
 
       <ClientList />
     </>

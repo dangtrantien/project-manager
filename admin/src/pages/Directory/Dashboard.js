@@ -6,7 +6,7 @@ import CategoryList from '../../component/Directory/Dashboard/CategoryList';
 const DashboardPage = () => {
   return (
     <>
-      <Header title='Loại dự án' linkTo='/new-category' />
+      <Header title='Project category' linkTo='/new-category' />
 
       <CategoryList />
     </>

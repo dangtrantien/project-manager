@@ -57,7 +57,7 @@ const useFilterSearch = (dataIndex, placeholderText) => {
             icon={<BiSearchAlt />}
             onClick={() => searchHandler(selectedKeys, confirm, dataIndex)}
           >
-            Tìm kiếm
+            Search
           </Button>
 
           <Button
@@ -67,11 +67,11 @@ const useFilterSearch = (dataIndex, placeholderText) => {
               clearFilters && resetSearchHandler(clearFilters, confirm)
             }
           >
-            Bỏ tìm kiếm
+            Reset
           </Button>
 
           <Button type='link' size='small' onClick={() => close()}>
-            Đóng
+            Close
           </Button>
         </Space>
       </div>

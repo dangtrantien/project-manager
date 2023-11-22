@@ -21,7 +21,7 @@ const Header = () => {
     <div className={style.container}>
       <div className={style['card-container']}>
         <div className={style['content-container']}>
-          <p className={style.content}>Tổng nhân viên</p>
+          <p className={style.content}>Total employee</p>
 
           <p style={{ color: '#0ca678' }} className={style.number}>
             {employee.total}
@@ -41,7 +41,7 @@ const Header = () => {
 
       <div className={style['card-container']}>
         <div className={style['content-container']}>
-          <p className={style.content}>Tổng nhân viên nam</p>
+          <p className={style.content}>Total male</p>
 
           <p style={{ color: '#4263eb' }} className={style.number}>
             {employee.data?.filter((e) => e.gender === 'male').length}
@@ -61,7 +61,7 @@ const Header = () => {
 
       <div className={style['card-container']}>
         <div className={style['content-container']}>
-          <p className={style.content}>Tổng nhân viên nữ</p>
+          <p className={style.content}>Total female</p>
 
           <p style={{ color: '#f76707' }} className={style.number}>
             {employee.data?.filter((e) => e.gender === 'female').length}
@@ -81,7 +81,7 @@ const Header = () => {
 
       <div className={style['card-container']}>
         <div className={style['content-container']}>
-          <p className={style.content}>Tổng nhân viên mới</p>
+          <p className={style.content}>Total new employee</p>
 
           <p style={{ color: '#ae3ec9' }} className={style.number}>
             {

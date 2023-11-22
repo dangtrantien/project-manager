@@ -51,8 +51,10 @@ const ClientList = () => {
   // Xóa data
   const deleteHandler = (id, multiple) => {
     confirm({
-      title: 'Bạn có chắc chắn muốn xóa dữ liệu?',
+      title: 'Are you sure delete this task?',
+      okText: 'Yes',
       okType: 'danger',
+      cancelText: 'No',
       onOk() {
         let url = `${host}/api/admin/client/delete-one/${id}`;
         let data = null;
@@ -90,25 +92,25 @@ const ClientList = () => {
 
   const columns = [
     {
-      title: 'STT',
+      title: '#',
       dataIndex: 'index',
       className: 'index-col',
     },
     {
-      title: 'Tên',
+      title: 'Name',
       key: 'name',
       dataIndex: 'name',
-      ...useFilterSearch('name', 'Tìm kiếm theo tên khách hàng'),
+      ...useFilterSearch('name', 'Search name'),
     },
     {
-      title: 'Mô tả',
+      title: 'Description',
       key: 'short_desc',
       dataIndex: 'short_desc',
       responsive: ['xl'],
       className: 'short-desc-col',
     },
     {
-      title: 'Ưu tiên',
+      title: 'Priority',
       key: 'priority',
       dataIndex: 'priority',
       textAlign: 'center',
@@ -117,7 +119,7 @@ const ClientList = () => {
       className: 'priority-col',
     },
     {
-      title: 'Trạng thái',
+      title: 'State',
       key: 'state',
       render: (_, { state }) => (
         <Tag color={state === 'active' ? 'green' : 'volcano'}>
@@ -133,7 +135,7 @@ const ClientList = () => {
       className: 'state-col',
     },
     {
-      title: '',
+      title: 'Action',
       key: 'action',
       render: (_, record) => (
         <Space style={{ width: '100%', justifyContent: 'space-evenly' }}>
@@ -181,19 +183,19 @@ const ClientList = () => {
             onClick={deleteHandler.bind(null, selectedRows, 'multiple')}
             disabled={selectedRows.length === 0}
           >
-            Xóa dữ liệu
+            Delete selected
           </Button>
 
           <Button
             onClick={() => setSelectedRows([])}
             disabled={selectedRows.length === 0}
           >
-            Bỏ chọn
+            Deselect All
           </Button>
 
           <span style={{ color: '#adb5bd' }}>
             {selectedRows.length > 0
-              ? `Đã lựa chọn ${selectedRows.length} dòng`
+              ? `Selected ${selectedRows.length} items`
               : ''}
           </span>
         </Space>

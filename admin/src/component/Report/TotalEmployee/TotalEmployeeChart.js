@@ -50,7 +50,7 @@ const TotalEmployeeChart = () => {
     appendPadding: 10,
     data: experienceData,
     colorField: 'type',
-    angleField: 'tổng nhân viên',
+    angleField: 'total',
     label: {
       type: 'inner',
       offset: '-30%',
@@ -72,7 +72,7 @@ const TotalEmployeeChart = () => {
   const configTechStack = {
     data: techStackData,
     xField: 'type',
-    yField: 'tổng nhân viên',
+    yField: 'total',
     label: {
       position: 'middle',
       style: {
@@ -91,7 +91,7 @@ const TotalEmployeeChart = () => {
   const configJoinedProject = {
     data: joinedProjectData,
     xField: 'type',
-    yField: 'tổng nhân viên',
+    yField: 'total',
     label: {
       position: 'middle',
       style: {
@@ -114,7 +114,7 @@ const TotalEmployeeChart = () => {
   return (
     <Space direction='vertical' size={50}>
       <Space direction='vertical' size='large' style={{ width: '100%' }}>
-        <h3>Số lượng nhân sự với mỗi loại kinh nghiệm</h3>
+        <h3>Total employee by experience</h3>
 
         {loading && (
           <Spin
@@ -138,7 +138,7 @@ const TotalEmployeeChart = () => {
       </Space>
 
       <Space direction='vertical' size='large' style={{ width: '100%' }}>
-        <h3>Số lượng nhân sự với mỗi loại tech stack sử dụng</h3>
+        <h3>Total employee by tech stack</h3>
 
         {loading && (
           <Spin
@@ -160,7 +160,7 @@ const TotalEmployeeChart = () => {
       </Space>
 
       <Space direction='vertical' size='large' style={{ width: '100%' }}>
-        <h3>Số lượng nhân sự tham gia dự án</h3>
+        <h3>Total employee joining project</h3>
 
         {loading && (
           <Spin

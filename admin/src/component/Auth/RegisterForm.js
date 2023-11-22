@@ -62,12 +62,12 @@ const RegisterForm = () => {
         onFinish={submitHandler}
       >
         <Form.Item
-          label='Tên hiển thị'
+          label='Display Name'
           name='displayName'
           rules={[
             {
               required: true,
-              message: 'Tên hiển thị không được để trống!',
+              message: 'Please enter your display name!',
             },
           ]}
         >
@@ -80,11 +80,9 @@ const RegisterForm = () => {
           rules={[
             {
               type: 'email',
-              message: 'Địa chỉ email không hợp lệ! VD: example@example.com',
             },
             {
               required: true,
-              message: 'Địa chỉ email không được để trống!',
             },
           ]}
           hasFeedback
@@ -93,13 +91,14 @@ const RegisterForm = () => {
         </Form.Item>
 
         <Form.Item
-          label='Mật khẩu'
+          label='Password'
           name='password'
           rules={[
-            { required: true, message: 'Mật khẩu không được để trống!' },
+            {
+              required: true,
+            },
             {
               min: 6,
-              message: 'Mật khẩu phải có ít nhất 6 ký tự!',
             },
           ]}
           hasFeedback
@@ -113,12 +112,12 @@ const RegisterForm = () => {
             type='primary'
             htmlType='submit'
           >
-            Đăng ký
+            Create Account
           </Button>
         </Form.Item>
 
         <div className={style['form-link']}>
-          <Link to='/login'>Đã có tài khoản?</Link>
+          <Link to='/login'>Already have an account?</Link>
         </div>
       </Form>
     </>

@@ -11,7 +11,7 @@ const ProjectStateDetail = ({ open, data, onClose }) => {
       title={<h2 style={{ fontWeight: 500 }}>{data?.name}</h2>}
       centered
       open={open}
-      okText='Chỉnh sửa'
+      okText='Edit'
       onCancel={onClose}
       onOk={() =>
         navigate('/new-project-state', {
@@ -23,7 +23,7 @@ const ProjectStateDetail = ({ open, data, onClose }) => {
       <p className='modal-short_desc'>{data?.short_desc}</p>
       <p className='modal-long_desc'>{data?.long_desc}</p>
       <p className='modal-state'>
-        Tình trạng:
+        State:
         <span
           className={data?.state === 'active' ? 'active-text' : 'inactive-text'}
         >

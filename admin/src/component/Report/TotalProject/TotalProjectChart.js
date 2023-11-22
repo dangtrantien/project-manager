@@ -51,7 +51,7 @@ const TotalProjectChart = () => {
     data: categoryData,
     isStack: true,
     xField: 'month',
-    yField: 'tổng dự án',
+    yField: 'total',
     seriesField: 'type',
     legend: {
       layout: 'horizontal',
@@ -101,7 +101,7 @@ const TotalProjectChart = () => {
     data: projectStateData,
     isStack: true,
     xField: 'month',
-    yField: 'tổng dự án',
+    yField: 'total',
     seriesField: 'type',
     legend: {
       layout: 'horizontal',
@@ -151,7 +151,7 @@ const TotalProjectChart = () => {
     data: techStackData,
     isStack: true,
     xField: 'month',
-    yField: 'tổng dự án',
+    yField: 'total',
     seriesField: 'type',
     legend: {
       layout: 'horizontal',
@@ -205,7 +205,7 @@ const TotalProjectChart = () => {
     <Space direction='vertical' size={50}>
       <Space direction='vertical' size={50} style={{ width: '100%' }}>
         <Space>
-          <p className='label'>Lọc theo năm :</p>
+          <p className='label'>Filter by year:</p>
 
           <DatePicker
             allowClear={false}
@@ -216,7 +216,7 @@ const TotalProjectChart = () => {
         </Space>
 
         <Space direction='vertical' size='large' style={{ width: '100%' }}>
-          <h3>Số lượng dự án với mỗi thể loại</h3>
+          <h3>Total project by category</h3>
 
           {loading && (
             <Spin
@@ -238,7 +238,7 @@ const TotalProjectChart = () => {
         </Space>
 
         <Space direction='vertical' size='large' style={{ width: '100%' }}>
-          <h3>Số lượng dự án với mỗi trạng thái</h3>
+          <h3>Total project by state</h3>
 
           {loading && (
             <Spin
@@ -260,7 +260,7 @@ const TotalProjectChart = () => {
         </Space>
 
         <Space direction='vertical' size='large' style={{ width: '100%' }}>
-          <h3>Số lượng dự án với mỗi loại tech stack sử dụng</h3>
+          <h3>Total project by tech stack</h3>
 
           {loading && (
             <Spin

@@ -76,11 +76,9 @@ const LoginForm = () => {
           rules={[
             {
               type: 'email',
-              message: 'Địa chỉ email không hợp lệ! VD: example@example.com',
             },
             {
               required: true,
-              message: 'Địa chỉ email không được để trống!',
             },
           ]}
           hasFeedback
@@ -89,21 +87,15 @@ const LoginForm = () => {
         </Form.Item>
 
         <Form.Item
-          label='Mật khẩu'
+          label='Password'
           name='password'
           rules={[
-            { required: true, message: 'Mật khẩu không được để trống!' },
-            () => ({
-              validator(_, value) {
-                if (!value || value.length >= 6) {
-                  return Promise.resolve();
-                }
-
-                return Promise.reject(
-                  new Error('Mật khẩu phải có ít nhất 6 ký tự!')
-                );
-              },
-            }),
+            {
+              required: true,
+            },
+            {
+              min: 6,
+            },
           ]}
           hasFeedback
         >
@@ -111,7 +103,7 @@ const LoginForm = () => {
         </Form.Item>
 
         <Form.Item name='remember' valuePropName='checked' noStyle>
-          <Checkbox>Lưu thông tin đăng nhập</Checkbox>
+          <Checkbox>Remember me</Checkbox>
         </Form.Item>
 
         <Form.Item>
@@ -120,17 +112,17 @@ const LoginForm = () => {
             type='primary'
             htmlType='submit'
           >
-            Đăng nhập
+            Submit
           </Button>
         </Form.Item>
 
         <Space style={{ justifyContent: 'space-between' }}>
           <div className={style['form-link']}>
-            <Link to='/register'>Chưa có tài khoản?</Link>
+            <Link to='/register'>Not register?</Link>
           </div>
 
           <div className={style['form-link']}>
-            <Link to='#top'>Quên mật khẩu!</Link>
+            <Link to='#top'>Lost your password?</Link>
           </div>
         </Space>
       </Form>

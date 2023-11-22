@@ -6,7 +6,7 @@ import ProjectStateList from '../../component/Directory/ProjectState/ProjectStat
 const ProjectStatePage = () => {
   return (
     <>
-      <Header title='Trạng thái dự án' linkTo='/new-project-state' />
+      <Header title='Project state' linkTo='/new-project-state' />
 
       <ProjectStateList />
     </>

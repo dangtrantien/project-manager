@@ -2,7 +2,6 @@ import { lazy, Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ConfigProvider } from 'antd';
-import viVN from 'antd/locale/vi_VN';
 
 import MainLayout from './pages/Layout/MainLayout';
 import MiniLayout from './pages/Layout/MiniLayout';
@@ -251,7 +250,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <Provider store={store}>
-      <ConfigProvider locale={viVN}>
+      <ConfigProvider>
         <RouterProvider router={router} />
       </ConfigProvider>
     </Provider>
